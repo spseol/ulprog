@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Úlohy pro výuku programování</title><link href="/" rel="alternate"></link><link href="/feeds/marek-nozka.atom.xml" rel="self"></link><id>/</id><updated>2015-04-30T09:39:00+02:00</updated><entry><title>Kalendář</title><link href="/kalendar.html" rel="alternate"></link><updated>2015-04-30T09:39:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:,2015-04-30:kalendar.html</id><summary type="html">&lt;p&gt;Vypište na obrazovku kalendář ve tvaru:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Úlohy pro výuku programování</title><link href="http://spseol.github.io/ulprog/" rel="alternate"></link><link href="http://spseol.github.io/ulprog/feeds/marek-nozka.atom.xml" rel="self"></link><id>http://spseol.github.io/ulprog/</id><updated>2015-04-30T09:39:00+02:00</updated><entry><title>Kalendář</title><link href="http://spseol.github.io/ulprog/kalendar.html" rel="alternate"></link><updated>2015-04-30T09:39:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-04-30:ulprog/kalendar.html</id><summary type="html">&lt;p&gt;Vypište na obrazovku kalendář ve tvaru:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;Po Út St Čt Pá So Ne
     1  2  3  4  5  6  
  7  8  9 10 11 12 13  
