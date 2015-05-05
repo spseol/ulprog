@@ -4,11 +4,15 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Marek'
 SITENAME = u'\xdalohy pro v\xfduku programov\xe1n\xed'
-SITEURL = ''
+SITEURL = 'http://spseol.github.io/ulprog/'
 
 PATH = 'content'
 
 THEME = 'ResponsivePelican'
+TAG_CLOUD_STEPS = 6
+TAG_CLOUD_MAX_ITEMS = 200
+
+
 TIMEZONE = 'Europe/Prague'
 
 DEFAULT_LANG = u'cs'
@@ -19,9 +23,11 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
+LINKS = (('SPŠE Olomouc', 'http://www.spseol.cz/'),
+         ('spseol.github.io', 'http://spseol.github.io/'),
+         ('~Nožka', 'http://hroch.spseol.cz/~nozka/'),
          ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
+         ('Pelican', 'http://getpelican.com/'),
          )
 
 # Social widget

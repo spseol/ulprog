@@ -6,8 +6,9 @@
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" id="responsive-style-css"  href='{{ SITE_URL }}/theme/css/style.css' type="text/css" media="all" />
-    <link rel="stylesheet" id="responsive-style-css"  href='{{ SITE_URL }}/theme/css/highlight.css' type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href='{{ SITEURL }}/theme/css/style.css' type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href='{{ SITEURL }}/theme/css/highlight.css' type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href='{{ SITEURL }}/theme/css/pygment.css' type="text/css" media="all" />
     {% if FEED_ALL_ATOM %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
     {% endif %}
@@ -40,7 +41,7 @@
 <div id="container" class="hfeed">
     <header id="header" >
         <div id="logo">
-                <h1><img src="{{ SITE_URL }}/theme/image/default-logo.png" width="300" height="100" alt="小铱的故事" />
+          <h1><a href="{{ SITEURL }}"><img src="{{ SITEURL }}/theme/image/default-logo.png" alt="ulplog" width ="99"/></a>
                 {{ SITENAME }}</h1>
         </div> <!-- /#logo-->
         <nav id="menu" class="main-nav"><ul class="menu">
@@ -58,6 +59,14 @@
             {% endfor %}
           {% endif %}
         {% endif %}
+
+        {% for category, articles in categories %}
+          {% for article in articles %}
+            {% if "zadání" in category.name %}
+              <li><a href="{{ SITEURL }}/{{ article.url }}" >Zadání: {{ article.title }}</a></li>
+            {% endif%}
+          {% endfor %}
+        {% endfor %}
 
         </ul></nav><!-- /#menu -->
     </header>
@@ -80,7 +89,7 @@
             <section id="widget-search" class="widget-wrapper widget_search">
 
                 <form id="searchform" action="http://www.google.com/search" method="get">
-                    <input id="q" class="field" type="text" placeholder="Search Blog" name="q" ></input>
+                    <input id="q" class="field" type="text" placeholder="Search UlProg" name="q" ></input>
                     <input id="ie" name="ie" type="hidden" value="utf-8" ></input>
                     <input id="oe" name="oe" type="hidden" value="utf-8" ></input>
                     <input id="channel" name="channel" type="hidden" value="suggest" ></input>
@@ -92,10 +101,10 @@
             {% block categories %}
             <section id="widget-category" class="widget-wrapper widget_archive">
                 <div class="widget-title">
-                    Category
+                    Kategorie
                 </div>
                 <ul>
-                    {% for category, article in categories%}
+                    {% for category, articles in categories %}
                         <li><a href="{{ SITEURL }}/{{ category.url }}" >{{ category.name }} </a></li>
                     {% endfor %}
                 </ul>
@@ -105,13 +114,25 @@
             {% block tagcloud %}
             <section id="widget-tagcloud" class="widget-wrapper widget_archive">
                 <div class="widget-title">
-                    Tagcloud
+                    TagCloud
                 </div>
                 <div>
                     {% for tag, size in tag_cloud %}
-                        <span><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a></span>
+                    <span><a href="{{ SITEURL }}/{{ tag.url }}" style="font-size:calc(160% - {{size}}0%);"
+                        >#{{ tag.name }}</a></span>
                     {% endfor %}
                 </div>
+            </section>
+            {% endblock %}
+
+            {% block social %}
+            <section id="widget-social" class="widget-wrapper widget_archive">
+                <div class="widget-title">Social</div>
+                <ul>
+                    {% for name, link in SOCIAL %}
+                        <li><a href="{{ link }}">{{ name }}</a></li>
+                    {% endfor %}
+                </ul>
             </section>
             {% endblock %}
 
@@ -119,7 +140,7 @@
             {% block links %}
             <section id="widget-links" class="widget-wrapper widget_archive">
                 <div class="widget-title">
-                    Links
+                    Odkazy
                 </div>
                 <ul>
                     {% for name, link in LINKS %}

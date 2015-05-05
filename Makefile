@@ -76,6 +76,14 @@ ifdef PORT
 else
 	$(BASEDIR)/develop_server.sh restart
 endif
+	make iceweasel
+
+iceweasel:
+ifdef PORT
+	iceweasel http://localhost:$(PORT)
+else
+	iceweasel http://localhost:8000
+endif
 
 stopserver:
 	kill -9 `cat pelican.pid`

@@ -1,7 +1,7 @@
 Title: Kalendář
 Date: 2015-04-30 09:39
 Category: úloha
-Tags: podmínky, cykly, mírně pokročilý
+Tags: podmínky a cykly, mírně pokročilý
 Author: Marek Nožka
 
 
@@ -23,7 +23,7 @@ Pro začátek stačí, když program bude načítat první den v týdnu, který 
 na první den měsíce. Například program, generující výše zmíněnou ukázku by přijal 
 jako vstup číslo `2`, protože měsíc začíná úterkem.
 
-
+    :::pycon
     >>> import datetime
     >>> today=datetime.date.today()
     >>> today.month
