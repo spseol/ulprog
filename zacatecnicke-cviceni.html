@@ -9,6 +9,7 @@
     <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/highlight.css' type="text/css" media="all" />
     <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/pygment.css' type="text/css" media="all" />
     <link href="http://spseol.github.io/ulprog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Full Atom Feed" />
+    <link href="http://spseol.github.io/ulprog/feeds/uloha.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Categories Atom Feed" />
     
 </head>
 
@@ -29,73 +30,111 @@
     </header>
     <section id="wrapper" class="clearfix">
         <section id="content" class="grid col-620" >
-<h4 class="content-archive">Articles tagged with <span style="color:rgb(0,102,204)">mírně pokročilý</span>: </h4>
                 <section class="breadcrumb-list">
-<a href="http://spseol.github.io/ulprog">UlProg</a> ››Tag: <a href="tag/mirne-pokrocily.html">mírně pokročilý</a>
+<a href="http://spseol.github.io/ulprog">UlProg</a> ›<a href="category/uloha.html">úloha</a> ›Začátečnické cvičení
                 </section>
 
 
-<ul>
-<li class="posts"><article class="post hentry">
-	<header>
-		<h2 class="post-title" >
-			<a href="http://spseol.github.io/ulprog/cetnost-znaku.html" rel="bookmark" title="Permalink to Četnost znaků">Četnost znaků</a>
-		</h2>
-		<div class="post-info">
-			<span class="post-lable">Post in</span>
-			<abbr class="date" title="2015-05-05T22:34:00"> 
-				<a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Út 05 květen 2015 </a>
-			</abbr>
-			<!-- COMMENTS -->
-		</div>
-	</header>
-	<div class="summary"><p>Vytvořte program, který ze standardního vstupu nebo ze souboru načte text a
-vypíše četnosti jednotlivých znaků textu na obrazovku. Četnosti znaků zobrazte
-nejen jako číselný údaj ale i graficky pomocí jednoduchého horizontálního
-bargrafu. Až se vám bargraf povede udělat horizontálně udělejte ho vertikálně.</p>
-<h2 id="mala-pomoc">Malá pomoc:</h2>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">stdin</span><span class="p">,</span> <span class="n">stdout ...</span></pre></div></div>
-	<footer>
-		<span class="post-lable">Category:</span>
-		<abbr class="category">
-			<a href="http://spseol.github.io/ulprog/category/uloha.html">uloha</a>
-		</abbr>
-	</footer>
-	<hr />
-</article></li>
-<li class="posts"><article class="post hentry">
-	<header>
-		<h2 class="post-title" >
-			<a href="http://spseol.github.io/ulprog/kalendar.html" rel="bookmark" title="Permalink to Kalendář">Kalendář</a>
-		</h2>
-		<div class="post-info">
-			<span class="post-lable">Post in</span>
-			<abbr class="date" title="2015-04-30T09:39:00"> 
-				<a href="http://spseol.github.io/ulprog/archive/2015/dub/index.html">Čt 30 duben 2015 </a>
-			</abbr>
-			<!-- COMMENTS -->
-		</div>
-	</header>
-	<div class="summary"><p>Vypište na obrazovku kalendář ve tvaru:</p>
-<div class="highlight"><pre>Po Út St Čt Pá So Ne
-    1  2  3  4  5  6  
- 7  8  9 10 11 12 13  
-14 15 16 17 18 19 20  
-21 22 23 24 25 26 27  
-28 29 30 31
+<section id="post" class="post hentry">
+    <header>
+    <h2 class="post-title" >Začátečnické cvičení</h2>
+    
+    <div class="post-meta">
+        <span class="meta-prep">Post in</span>
+        <abbr class="date" title="2015-05-05T22:24:00"> 
+            <a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Út 05 květen 2015 </a>
+        </abbr>
+        <span class="meta-prep"> |Tags</span>
+                <a href="http://spseol.github.io/ulprog/tag/podminky-a-cykly.html">podmínky a cykly</a>
+                <a href="http://spseol.github.io/ulprog/tag/zacatecnik.html">začátečník</a>
+        <!-- TOBE COMMENTS -->
+    </div>
+    </header>
+    <div class="post-entry">
+        <p>Zde je několik málo úloh na procvičení podmínek a cyklů. Vstup je brán vždy z
+klávesnice. Můžete použít funkci <code>input()</code> nebo <code>raw_input()</code>. Pro tisk
+použijte funkci <code>print</code>.</p>
+<div class="highlight"><pre><span class="n">retezec</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;zadej libovolný řetězec&#39;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;zadej číslo&#39;</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">retezec</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">cislo</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">retezec</span><span class="p">,</span> <span class="n">cislo</span>
 </pre></div>
 
 
-<p>Tato úloha nespočívá v pouhém nalezení ...</p></div>
-	<footer>
-		<span class="post-lable">Category:</span>
-		<abbr class="category">
-			<a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
-		</abbr>
-	</footer>
-	<hr />
-</article></li>
-</ul>
+<p>Také se bude jistě hodit metoda <code>str.split()</code>.</p>
+<div class="highlight"><pre><span class="n">retezec</span> <span class="o">=</span> <span class="s">&quot;1  2  abc d eee      ff&quot;</span>
+<span class="n">seznam</span> <span class="o">=</span> <span class="n">retezec</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">seznam</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">seznam</span><span class="p">)</span>
+</pre></div>
+
+
+<ol>
+<li>
+<p>Je dána posloupnost znaků. Určete počet různých sudých <strong>cifer</strong>, které se
+    zde nacházejí.</p>
+<div class="highlight"><pre>zadej znaky &gt; 23 15 ahoj 18 jedna 9 4441
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; v tomto řetězci je 5 sudých cifer
+</pre></div>
+
+
+</li>
+<li>
+<p>Je dána posloupnost celých čísel oddělených mezerou. 
+    Pro záporná čísla vypište na obrazovku jejich druhou mocninu. 
+    Pro kladná čísla vypište na obrazovku jejich odmocninu.</p>
+<div class="highlight"><pre>zadej čísla &gt; 9 -9 -12 3 2
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 3 81 144 1.7320 1.4142
+</pre></div>
+
+
+</li>
+<li>
+<p>Je dána posloupnost celých čísel. Přerovnejte čísla tak, aby na začátku
+    posloupnosti byla všechna záporná čísla v původním pořadí a za nimi
+    všechna nezáporná čísla opět se zachováním jejich původního pořadí. Upravenou
+    posloupnost vypište.</p>
+<div class="highlight"><pre>zadej čísla &gt; -12 5 4 8 9 -1 
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; -12 -1 5 4 8 9
+</pre></div>
+
+
+</li>
+<li>
+<p>Je dána posloupnost celých čísel. Přerovnejte čísla tak, aby na začátku
+    posloupnosti byla všechna záporná čísla v původním pořadí a za nimi všechna
+    nezáporná čísla v <strong>opačném</strong> pořadí. Upravenou posloupnost vypište.</p>
+<div class="highlight"><pre>zadej čísla &gt; -12 5 4 8 9 -1 
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; -12 -1 9 8 4 5
+</pre></div>
+
+
+</li>
+</ol>
+    </div><!-- /.entry-content -->
+    <footer class="post-meta">
+        <span class="meta-prep">Category:</span>
+        <abbr class="category">
+            <a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
+        </abbr>
+    </footer>
+    <section id="respond">
+        <div id="disqus_thread">
+        <script type="text/javascript">
+        var disqus_identifier = "zacatecnicke-cviceni.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        </div>
+
+    </section>
+</section>
+
+
         </section><!-- #content -->
         <section id="widgets" class="grid col-300 fit" >
             <!--

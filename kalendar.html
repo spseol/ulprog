@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/style.css' type="text/css" media="all" />
     <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/highlight.css' type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/pygment.css' type="text/css" media="all" />
     <link href="http://spseol.github.io/ulprog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Full Atom Feed" />
     <link href="http://spseol.github.io/ulprog/feeds/uloha.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Categories Atom Feed" />
     
@@ -16,18 +17,21 @@
 <div id="container" class="hfeed">
     <header id="header" >
         <div id="logo">
-                <h1><img src="http://spseol.github.io/ulprog/theme/image/default-logo.png" width="300" height="100" alt="小铱的故事" />
+          <h1><a href="http://spseol.github.io/ulprog"><img src="http://spseol.github.io/ulprog/theme/image/default-logo.png" alt="ulplog" width ="99"/></a>
                 Úlohy pro výuku programování</h1>
         </div> <!-- /#logo-->
         <nav id="menu" class="main-nav"><ul class="menu">
-            <li><a href="http://spseol.github.io/ulprog/pages/3a.html">3A</a></li>
+            <li><a href="http://spseol.github.io/ulprog/pages/jak-prispet.html">Jak přispět?</a></li>
+            <li><a href="http://spseol.github.io/ulprog/pages/o-teto-strance.html">O této stránce</a></li>
+
+              <li><a href="http://spseol.github.io/ulprog/3a.html" >Zadání: 3A</a></li>
 
         </ul></nav><!-- /#menu -->
     </header>
     <section id="wrapper" class="clearfix">
         <section id="content" class="grid col-620" >
                 <section class="breadcrumb-list">
-<a href="http://spseol.github.io/ulprog">Blog</a> ›<a href="category/uloha.html">úloha</a> ›Kalendář
+<a href="http://spseol.github.io/ulprog">UlProg</a> ›<a href="category/uloha.html">úloha</a> ›Kalendář
                 </section>
 
 
@@ -41,8 +45,7 @@
             <a href="http://spseol.github.io/ulprog/archive/2015/dub/index.html">Čt 30 duben 2015 </a>
         </abbr>
         <span class="meta-prep"> |Tags</span>
-                <a href="http://spseol.github.io/ulprog/tag/podminky.html">podmínky</a>
-                <a href="http://spseol.github.io/ulprog/tag/cykly.html">cykly</a>
+                <a href="http://spseol.github.io/ulprog/tag/podminky-a-cykly.html">podmínky a cykly</a>
                 <a href="http://spseol.github.io/ulprog/tag/mirne-pokrocily.html">mírně pokročilý</a>
         <!-- TOBE COMMENTS -->
     </div>
@@ -65,21 +68,21 @@ umí vypsat! Je potřeba jej opravdu naprogramovat.</p>
 Pro začátek stačí, když program bude načítat první den v týdnu, který připadá 
 na první den měsíce. Například program, generující výše zmíněnou ukázku by přijal 
 jako vstup číslo <code>2</code>, protože měsíc začíná úterkem.</p>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">datetime</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">today</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">today</span><span class="o">.</span><span class="n">month</span>
-<span class="mi">10</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span>
-<span class="mi">30</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span>
-<span class="mi">2012</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">today</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span>
-<span class="mi">1</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span>
-<span class="mi">2</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">28</span><span class="p">)</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span>
-<span class="mi">6</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">dayCount</span><span class="o">=</span><span class="p">[</span><span class="bp">None</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">today</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">today</span><span class="o">.</span><span class="n">month</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">today</span><span class="o">.</span><span class="n">day</span>
+<span class="go">30</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">today</span><span class="o">.</span><span class="n">year</span>
+<span class="go">2012</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">today</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">28</span><span class="p">)</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dayCount</span><span class="o">=</span><span class="p">[</span><span class="bp">None</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
 </pre></div>
     </div><!-- /.entry-content -->
     <footer class="post-meta">
@@ -110,7 +113,7 @@ jako vstup číslo <code>2</code>, protože měsíc začíná úterkem.</p>
             <section id="widget-search" class="widget-wrapper widget_search">
 
                 <form id="searchform" action="http://www.google.com/search" method="get">
-                    <input id="q" class="field" type="text" placeholder="Search Blog" name="q" ></input>
+                    <input id="q" class="field" type="text" placeholder="Search UlProg" name="q" ></input>
                     <input id="ie" name="ie" type="hidden" value="utf-8" ></input>
                     <input id="oe" name="oe" type="hidden" value="utf-8" ></input>
                     <input id="channel" name="channel" type="hidden" value="suggest" ></input>
@@ -120,33 +123,54 @@ jako vstup číslo <code>2</code>, protože měsíc začíná úterkem.</p>
             -->
             <section id="widget-category" class="widget-wrapper widget_archive">
                 <div class="widget-title">
-                    Category
+                    Kategorie
                 </div>
                 <ul>
-                        <li><a href="http://spseol.github.io/ulprog/category/uloha.html" >úloha </a></li>
+                        <li><a href="http://spseol.github.io/ulprog/category/uloha.html" >uloha </a></li>
+                        <li><a href="http://spseol.github.io/ulprog/category/zadani-pro-tridu.html" >zadání pro třídu </a></li>
                 </ul>
             </section>
 
             <section id="widget-tagcloud" class="widget-wrapper widget_archive">
                 <div class="widget-title">
-                    Tagcloud
+                    TagCloud
                 </div>
                 <div>
-                        <span><a href="http://spseol.github.io/ulprog/tag/cykly.html">cykly</a></span>
-                        <span><a href="http://spseol.github.io/ulprog/tag/mirne-pokrocily.html">mírně pokročilý</a></span>
-                        <span><a href="http://spseol.github.io/ulprog/tag/podminky.html">podmínky</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/podminky-a-cykly.html" style="font-size:calc(160% - 10%);"
+                        >#podmínky a cykly</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/zacatecnik.html" style="font-size:calc(160% - 10%);"
+                        >#začátečník</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/mirne-pokrocily.html" style="font-size:calc(160% - 20%);"
+                        >#mírně pokročilý</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/python.html" style="font-size:calc(160% - 20%);"
+                        >#python</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/slovnik.html" style="font-size:calc(160% - 60%);"
+                        >#slovník</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/datove-typy.html" style="font-size:calc(160% - 20%);"
+                        >#datové typy</a></span>
                 </div>
+            </section>
+
+            <section id="widget-social" class="widget-wrapper widget_archive">
+                <div class="widget-title">Social</div>
+                <ul>
+                        <li><a href="https://github.com/spseol/">GitHub</a></li>
+                        <li><a href="https://cs-cz.facebook.com/spseol">Facebook</a></li>
+                        <li><a href="https://plus.google.com/118347382558771670752">G+</a></li>
+                </ul>
             </section>
 
 
             <section id="widget-links" class="widget-wrapper widget_archive">
                 <div class="widget-title">
-                    Links
+                    Odkazy
                 </div>
                 <ul>
-                        <li><a href="http://getpelican.com/">Pelican</a></li>
+                        <li><a href="http://www.spseol.cz/">SPŠE Olomouc</a></li>
+                        <li><a href="http://spseol.github.io/">spseol.github.io</a></li>
+                        <li><a href="http://hroch.spseol.cz/~nozka/">~Nožka</a></li>
                         <li><a href="http://python.org/">Python.org</a></li>
-                        <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        <li><a href="http://getpelican.com/">Pelican</a></li>
                 </ul>
             </section>
             

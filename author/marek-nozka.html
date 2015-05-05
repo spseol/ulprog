@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/style.css' type="text/css" media="all" />
     <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/highlight.css' type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/pygment.css' type="text/css" media="all" />
     <link href="http://spseol.github.io/ulprog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Full Atom Feed" />
     
 </head>
@@ -15,11 +16,14 @@
 <div id="container" class="hfeed">
     <header id="header" >
         <div id="logo">
-                <h1><img src="http://spseol.github.io/ulprog/theme/image/default-logo.png" width="300" height="100" alt="小铱的故事" />
+          <h1><a href="http://spseol.github.io/ulprog"><img src="http://spseol.github.io/ulprog/theme/image/default-logo.png" alt="ulplog" width ="99"/></a>
                 Úlohy pro výuku programování</h1>
         </div> <!-- /#logo-->
         <nav id="menu" class="main-nav"><ul class="menu">
-            <li><a href="http://spseol.github.io/ulprog/pages/3a.html">3A</a></li>
+            <li><a href="http://spseol.github.io/ulprog/pages/jak-prispet.html">Jak přispět?</a></li>
+            <li><a href="http://spseol.github.io/ulprog/pages/o-teto-strance.html">O této stránce</a></li>
+
+              <li><a href="http://spseol.github.io/ulprog/3a.html" >Zadání: 3A</a></li>
 
         </ul></nav><!-- /#menu -->
     </header>
@@ -31,6 +35,153 @@
 
 
 <ul>
+<li class="posts"><article class="post hentry">
+	<header>
+		<h2 class="post-title" >
+			<a href="http://spseol.github.io/ulprog/cetnost-znaku.html" rel="bookmark" title="Permalink to Četnost znaků">Četnost znaků</a>
+		</h2>
+		<div class="post-info">
+			<span class="post-lable">Post in</span>
+			<abbr class="date" title="2015-05-05T22:34:00"> 
+				<a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Út 05 květen 2015 </a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+	</header>
+	<div class="summary"><p>Vytvořte program, který ze standardního vstupu nebo ze souboru načte text a
+vypíše četnosti jednotlivých znaků textu na obrazovku. Četnosti znaků zobrazte
+nejen jako číselný údaj ale i graficky pomocí jednoduchého horizontálního
+bargrafu. Až se vám bargraf povede udělat horizontálně udělejte ho vertikálně.</p>
+<h2 id="mala-pomoc">Malá pomoc:</h2>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">stdin</span><span class="p">,</span> <span class="n">stdout ...</span></pre></div></div>
+	<footer>
+		<span class="post-lable">Category:</span>
+		<abbr class="category">
+			<a href="http://spseol.github.io/ulprog/category/uloha.html">uloha</a>
+		</abbr>
+	</footer>
+	<hr />
+</article></li>
+<li class="posts"><article class="post hentry">
+	<header>
+		<h2 class="post-title" >
+			<a href="http://spseol.github.io/ulprog/zacatecnicke-cviceni.html" rel="bookmark" title="Permalink to Začátečnické cvičení">Začátečnické cvičení</a>
+		</h2>
+		<div class="post-info">
+			<span class="post-lable">Post in</span>
+			<abbr class="date" title="2015-05-05T22:24:00"> 
+				<a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Út 05 květen 2015 </a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+	</header>
+	<div class="summary"><p>Zde je několik málo úloh na procvičení podmínek a cyklů. Vstup je brán vždy z
+klávesnice. Můžete použít funkci <code>input()</code> nebo <code>raw_input()</code>. Pro tisk
+použijte funkci <code>print</code>.</p>
+<div class="highlight"><pre><span class="n">retezec</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;zadej libovolný řetězec&#39;</span><span class="p">)</span>
+<span class="n">cislo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;zadej číslo&#39;</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">retezec</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">cislo</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">retezec</span><span class="p">,</span> <span class="n">cislo</span>
+</pre></div>
+
+
+<p>Také se bude jistě hodit metoda <code>str ...</code></p></div>
+	<footer>
+		<span class="post-lable">Category:</span>
+		<abbr class="category">
+			<a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
+		</abbr>
+	</footer>
+	<hr />
+</article></li>
+<li class="posts"><article class="post hentry">
+	<header>
+		<h2 class="post-title" >
+			<a href="http://spseol.github.io/ulprog/seznamy-a-slovniky.html" rel="bookmark" title="Permalink to Seznamy a slovníky">Seznamy a slovníky</a>
+		</h2>
+		<div class="post-info">
+			<span class="post-lable">Post in</span>
+			<abbr class="date" title="2015-05-05T22:15:00"> 
+				<a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Út 05 květen 2015 </a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+	</header>
+	<div class="summary"><ol>
+<li>
+<p>Vytvořte <code>tuple</code> aritmetické posloupnosti o 30 položkách podle následující vzoru:</p>
+<p><code>(3,7,11,15,19, ...)</code></p>
+</li>
+<li>
+<p>Vytvořte <code>tuple</code> obsahující mocniny dvou menší než 10000.</p>
+<p><code>(1,2,4,...,8192)</code></p>
+</li>
+<li>
+<p>Vytvořte <code>list</code> podle následujícího vzoru:</p>
+<p><code>[2,1,4,3,6,5,...,98,97,100,99]</code></p>
+</li>
+<li>
+<p>Vytvořte <code>list</code>, který bude mít 20 hodnot podle ...</p></li></ol></div>
+	<footer>
+		<span class="post-lable">Category:</span>
+		<abbr class="category">
+			<a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
+		</abbr>
+	</footer>
+	<hr />
+</article></li>
+<li class="posts"><article class="post hentry">
+	<header>
+		<h2 class="post-title" >
+			<a href="http://spseol.github.io/ulprog/zakladni-datove-typy.html" rel="bookmark" title="Permalink to Základní datové typy">Základní datové typy</a>
+		</h2>
+		<div class="post-info">
+			<span class="post-lable">Post in</span>
+			<abbr class="date" title="2015-05-05T22:09:00"> 
+				<a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Út 05 květen 2015 </a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+	</header>
+	<div class="summary"><p>Vytvořte následující proměnné a proveďte s mini požadované operace:</p>
+<ul>
+<li><code>r</code> bude obsahovat reálné číslo 3,1415.</li>
+<li><code>f</code> bude obsahovat reálné číslo 3.</li>
+<li><code>c</code> bude obsahovat celé číslo 125.</li>
+<li>Sečtěte <code>r</code> a <code>f</code> a <code>c</code> a výsledek převeďte na celé číslo.</li>
+<li><code>z</code> bude obsahovat komplexní číslo (3+4i)</li>
+<li><code>s</code> bude řetězec ...</li></ul></div>
+	<footer>
+		<span class="post-lable">Category:</span>
+		<abbr class="category">
+			<a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
+		</abbr>
+	</footer>
+	<hr />
+</article></li>
+<li class="posts"><article class="post hentry">
+	<header>
+		<h2 class="post-title" >
+			<a href="http://spseol.github.io/ulprog/3a.html" rel="bookmark" title="Permalink to 3A">3A</a>
+		</h2>
+		<div class="post-info">
+			<span class="post-lable">Post in</span>
+			<abbr class="date" title="2015-04-30T11:43:00"> 
+				<a href="http://spseol.github.io/ulprog/archive/2015/dub/index.html">Čt 30 duben 2015 </a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+	</header>
+	<div class="summary"><p>úlohy pro třídu 3A</p></div>
+	<footer>
+		<span class="post-lable">Category:</span>
+		<abbr class="category">
+			<a href="http://spseol.github.io/ulprog/category/zadani-pro-tridu.html">zadání pro třídu</a>
+		</abbr>
+	</footer>
+	<hr />
+</article></li>
 <li class="posts"><article class="post hentry">
 	<header>
 		<h2 class="post-title" >
@@ -70,7 +221,7 @@
             <section id="widget-search" class="widget-wrapper widget_search">
 
                 <form id="searchform" action="http://www.google.com/search" method="get">
-                    <input id="q" class="field" type="text" placeholder="Search Blog" name="q" ></input>
+                    <input id="q" class="field" type="text" placeholder="Search UlProg" name="q" ></input>
                     <input id="ie" name="ie" type="hidden" value="utf-8" ></input>
                     <input id="oe" name="oe" type="hidden" value="utf-8" ></input>
                     <input id="channel" name="channel" type="hidden" value="suggest" ></input>
@@ -80,33 +231,54 @@
             -->
             <section id="widget-category" class="widget-wrapper widget_archive">
                 <div class="widget-title">
-                    Category
+                    Kategorie
                 </div>
                 <ul>
-                        <li><a href="http://spseol.github.io/ulprog/category/uloha.html" >úloha </a></li>
+                        <li><a href="http://spseol.github.io/ulprog/category/uloha.html" >uloha </a></li>
+                        <li><a href="http://spseol.github.io/ulprog/category/zadani-pro-tridu.html" >zadání pro třídu </a></li>
                 </ul>
             </section>
 
             <section id="widget-tagcloud" class="widget-wrapper widget_archive">
                 <div class="widget-title">
-                    Tagcloud
+                    TagCloud
                 </div>
                 <div>
-                        <span><a href="http://spseol.github.io/ulprog/tag/cykly.html">cykly</a></span>
-                        <span><a href="http://spseol.github.io/ulprog/tag/mirne-pokrocily.html">mírně pokročilý</a></span>
-                        <span><a href="http://spseol.github.io/ulprog/tag/podminky.html">podmínky</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/podminky-a-cykly.html" style="font-size:calc(160% - 10%);"
+                        >#podmínky a cykly</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/zacatecnik.html" style="font-size:calc(160% - 10%);"
+                        >#začátečník</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/mirne-pokrocily.html" style="font-size:calc(160% - 20%);"
+                        >#mírně pokročilý</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/python.html" style="font-size:calc(160% - 20%);"
+                        >#python</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/slovnik.html" style="font-size:calc(160% - 60%);"
+                        >#slovník</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/datove-typy.html" style="font-size:calc(160% - 20%);"
+                        >#datové typy</a></span>
                 </div>
+            </section>
+
+            <section id="widget-social" class="widget-wrapper widget_archive">
+                <div class="widget-title">Social</div>
+                <ul>
+                        <li><a href="https://github.com/spseol/">GitHub</a></li>
+                        <li><a href="https://cs-cz.facebook.com/spseol">Facebook</a></li>
+                        <li><a href="https://plus.google.com/118347382558771670752">G+</a></li>
+                </ul>
             </section>
 
 
             <section id="widget-links" class="widget-wrapper widget_archive">
                 <div class="widget-title">
-                    Links
+                    Odkazy
                 </div>
                 <ul>
-                        <li><a href="http://getpelican.com/">Pelican</a></li>
+                        <li><a href="http://www.spseol.cz/">SPŠE Olomouc</a></li>
+                        <li><a href="http://spseol.github.io/">spseol.github.io</a></li>
+                        <li><a href="http://hroch.spseol.cz/~nozka/">~Nožka</a></li>
                         <li><a href="http://python.org/">Python.org</a></li>
-                        <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        <li><a href="http://getpelican.com/">Pelican</a></li>
                 </ul>
             </section>
             

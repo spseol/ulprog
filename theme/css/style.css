@@ -50,6 +50,8 @@ CSS Rules: Sorted alphabetically for better organization.
 
 /* =Reset CSS (v2.0) http://meyerweb.com/eric/tools/css/reset/
 -------------------------------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,latin-ext);
 
 
 /*HTML5 display-role reset for older browsers */
@@ -120,8 +122,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	background: #efefef;
 	color: #555;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
+	font-family: Lora, Arial, Helvetica, sans-serif;
 	font-smoothing: antialiased;
 	line-height: 1.5em;
 	text-rendering: optimizeLegibility;
@@ -1075,16 +1076,16 @@ table {
 -------------------------------------------------------------- */
 ul {
 	list-style-type: disc;
-    margin: 0;
-    padding: 0;
+/*  margin: 0; */
+/*  padding: 0;*/
 }
 
 ol {
 	line-height: 22px;
 	list-style-position: outside;
 	list-style-type: decimal;
-    margin: 0;
-    padding: 0;
+/*    margin: 0; */
+/*    padding: 0;*/
 }
 
 dt {
@@ -1118,37 +1119,37 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-    font-size: 2.625em; /* = 42px */
+    font-size: 200%;
     margin-bottom: .5em;
     margin-top: .5em;
 }
 
 h2 {
-    font-size: 2.250em; /* = 36px */
+    font-size: 160%;
     margin-bottom: .75em;
     margin-top: .75em;
 }
 
 h3 {
-    font-size: 1.875em; /* = 30px */
+    font-size: 130%;
     margin-bottom: .857em;
     margin-top: .857em;
 }
 
 h4 {
-    font-size: 1.500em; /* = 24px */
+    font-size: 110%;
     margin-bottom: 1em;
     margin-top: 1em;
 }
 
 h5 {
-    font-size: 1.125em; /* = 18px */
+    font-size: 100%;
     margin-bottom: 1.125em;
     margin-top: 1.125em;
 }
 
 h6 {
-    font-size: 1.000em; /* = 16px */
+    font-size: 90%; 
     margin-bottom: 1.285em;
     margin-top: 1.285em;
 }
@@ -1225,13 +1226,13 @@ ol {
 
 ul,
 ol {
-    margin: 0 1.5em 1.5em 0;
+    margin: 0 1.5em 0em 0;
     padding-left: 2.0em;
 }
 
 li ul,
 li ol {
-    margin: 0;
+/*    margin: 0;*/
 }
 
 form div {
@@ -1285,15 +1286,15 @@ form div {
 -------------------------------------------------------------- */
 
 #logo img{
-	width: 50px;
-	height: 50px;
+/*  width: 50px; */
+/*  height: 50px;*/
 	display: inline-block;
 }
 
 #logo {
 	float: left;
 	margin: 0;
-	font-family: "Segoe UI Light" ;
+	font-family: "Bree Serif", "Segoe UI Light" ;
 	color: #555555;
 }
 
@@ -1353,7 +1354,7 @@ form div {
 }
 
 #content-sitemap a {
-	font-size: 12px;
+/*  font-size: 12px;*/
 }
 
 #content .sticky {
@@ -1415,7 +1416,7 @@ form div {
 }
 
 #featured p {
-	font-size: 18px;
+/*  font-size: 18px;*/
 	font-weight: 200;
 	line-height: 27px;
 	padding: 0 40px 0 40px;
@@ -1445,7 +1446,7 @@ li.posts {
 }
 
 .comments-link {
-	font-size: 12px;
+/*  font-size: 12px;*/
 }
 
 #cancel-comment-reply-link {
@@ -1454,7 +1455,7 @@ li.posts {
 
 .post-data {
 	clear: both;
-	font-size: 12px;
+/*  font-size: 12px;*/
 	font-weight: 700;
 	margin-top: 20px;
 }
@@ -1470,14 +1471,14 @@ li.posts {
 .post-meta {
 	clear: both;
 	color: #9f9f9f;
-	font-size: 12px;
+/*  font-size: 12px;*/
 	margin-bottom: 10px;
 }
 
 .post-edit {
 	clear: both;
 	display: block;
-	font-size: 12px;
+/*  font-size: 12px;*/
 	margin: 1.5em 0;
 }
 
@@ -1499,7 +1500,7 @@ li.posts {
 	margin-right: 1.5em;
 }
 #content ul {
-    padding-left: 0;
+/*    padding-left: 0;*/
 }
 
 .post-entry h1, .summary h1{
@@ -1531,13 +1532,13 @@ li.posts {
 -------------------------------------------------------------- */
 .ellipsis {
 	color: #aaa;
-	font-size: 18px;
+	font-size: 110%;
 	margin-left: 5px;
 }
 
 .form-allowed-tags {
     display: none;
-	font-size: 10px;
+/*  font-size: 10px;*/
 }
 
 /* =Widgets
@@ -1576,7 +1577,7 @@ li.posts {
 
 #widgets ul,
 #widgets ol {
-    padding: 0 0 0 20px;
+/*    padding: 0 0 0 20px;*/
 }
 
 #widgets ul li a {
@@ -1710,7 +1711,7 @@ li.posts {
 }
 
 .top-widget .widget-title {
-    font-size: 14px;
+/*    font-size: 14px;*/
     padding: 0;
     text-align: right;
 }
@@ -1749,7 +1750,7 @@ li.posts {
 .top-menu li a {
 	border-left: 1px solid #ccc;
 	color: #333;
-	font-size: 11px;
+/*  font-size: 11px;*/
 	padding: 0 4px 0 8px;
 }
 
@@ -1778,6 +1779,8 @@ li.posts {
 
 .main-nav {
 	clear:both;
+  font-family: "Bree Serif", "Segoe UI Light" ;
+  font-size: 105%;
 }
 
 .menu, 
@@ -1863,7 +1866,7 @@ li.posts {
 	color: #fff;
 	cursor: pointer;
 	display: block;
-	font-size: 13px;
+/*  font-size: 13px;*/
 	font-weight: 700;
 	height: 45px;
 	line-height: 45px;
@@ -2361,7 +2364,7 @@ ul.menu > li:hover {
 /* =Breadcrumb Lists
 -------------------------------------------------------------- */
 .breadcrumb-list {
-	font-size: 12px;
+/*    font-size: 12px;*/
 }
 
 /* =Comments
@@ -2849,7 +2852,7 @@ BDO[DIR="rtl"] {
 	}
 
 	h1,  h2,  h3,  h4,  h5,  h6 {
-		page-break-after: avoid;
+    page-break-after: avoid;
 	}
 
 	ul,  ol,  dl {
@@ -2980,7 +2983,6 @@ BDO[DIR="rtl"] {
 	
 	.js .main-nav .menu li a {
 		color: #444;
-		font-size: 13px;
 		font-weight: normal;
 		height: 45px;
 		line-height: 45px;
@@ -3078,7 +3080,7 @@ BDO[DIR="rtl"] {
 	.top-menu, 
 	.footer-menu li {
 		float: none;
-		font-size: 11px;
+/*    font-size: 11px;*/
 		text-align: center;
 	}
 	

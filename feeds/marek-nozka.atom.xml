@@ -1,5 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Úlohy pro výuku programování</title><link href="http://spseol.github.io/ulprog/" rel="alternate"></link><link href="http://spseol.github.io/ulprog/feeds/marek-nozka.atom.xml" rel="self"></link><id>http://spseol.github.io/ulprog/</id><updated>2015-04-30T09:39:00+02:00</updated><entry><title>Kalendář</title><link href="http://spseol.github.io/ulprog/kalendar.html" rel="alternate"></link><updated>2015-04-30T09:39:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-04-30:ulprog/kalendar.html</id><summary type="html">&lt;p&gt;Vypište na obrazovku kalendář ve tvaru:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Úlohy pro výuku programování</title><link href="http://spseol.github.io/ulprog/" rel="alternate"></link><link href="http://spseol.github.io/ulprog/feeds/marek-nozka.atom.xml" rel="self"></link><id>http://spseol.github.io/ulprog/</id><updated>2015-05-05T22:34:00+02:00</updated><entry><title>Četnost znaků</title><link href="http://spseol.github.io/ulprog/cetnost-znaku.html" rel="alternate"></link><updated>2015-05-05T22:34:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-05-05:ulprog/cetnost-znaku.html</id><summary type="html">&lt;p&gt;Vytvořte program, který ze standardního vstupu nebo ze souboru načte text a
+vypíše četnosti jednotlivých znaků textu na obrazovku. Četnosti znaků zobrazte
+nejen jako číselný údaj ale i graficky pomocí jednoduchého horizontálního
+bargrafu. Až se vám bargraf povede udělat horizontálně udělejte ho vertikálně.&lt;/p&gt;
+&lt;h2 id="mala-pomoc"&gt;Malá pomoc:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt;
+
+&lt;span class="n"&gt;cetnosti&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readline&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="c"&gt;# tiskne seřazené četnosti&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;znak&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cetnosti&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;()):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;znak&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;-&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;cetnosti&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;znak&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c"&gt;# poměrně neefektvní zjištění maximální četnosti znaku&lt;/span&gt;
+&lt;span class="n"&gt;hodnoty&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cetnosti&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="c"&gt;# všechny hodnoty ve slovníku&lt;/span&gt;
+&lt;span class="n"&gt;hodnoty&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;               &lt;span class="c"&gt;# seřadím je&lt;/span&gt;
+&lt;span class="n"&gt;hodnoty&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;            &lt;span class="c"&gt;# nejčetnější je na začátku&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;nejčetnější znak je zastoupen&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hodnoty&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;krát&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="priklad-pouziti-programu"&gt;Příklad použití programu&lt;/h2&gt;
+&lt;p&gt;Můžete si jednoduše ověřit, proč se v Morseově abecedě píše &lt;code&gt;E&lt;/code&gt; jako &lt;code&gt;.&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;w3m -dump &lt;span class="s1"&gt;&amp;#39;http://en.wikipedia.org/wiki/Transistor&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; cstocs utf-8 ascii &lt;span class="p"&gt;|&lt;/span&gt; cetnost-znaku.py
+&lt;span class="m"&gt;0&lt;/span&gt;     &lt;span class="m"&gt;245&lt;/span&gt; **
+&lt;span class="m"&gt;1&lt;/span&gt;     &lt;span class="m"&gt;222&lt;/span&gt; **
+&lt;span class="m"&gt;2&lt;/span&gt;     &lt;span class="m"&gt;223&lt;/span&gt; **
+&lt;span class="m"&gt;3&lt;/span&gt;      &lt;span class="m"&gt;97&lt;/span&gt; 
+&lt;span class="m"&gt;4&lt;/span&gt;      &lt;span class="m"&gt;88&lt;/span&gt; 
+&lt;span class="m"&gt;5&lt;/span&gt;     &lt;span class="m"&gt;124&lt;/span&gt; *
+&lt;span class="m"&gt;6&lt;/span&gt;      &lt;span class="m"&gt;59&lt;/span&gt; 
+&lt;span class="m"&gt;7&lt;/span&gt;      &lt;span class="m"&gt;73&lt;/span&gt; 
+&lt;span class="m"&gt;8&lt;/span&gt;      &lt;span class="m"&gt;54&lt;/span&gt; 
+&lt;span class="m"&gt;9&lt;/span&gt;     &lt;span class="m"&gt;109&lt;/span&gt; *
+A    &lt;span class="m"&gt;2914&lt;/span&gt; ***************************
+B     &lt;span class="m"&gt;637&lt;/span&gt; *****
+C    &lt;span class="m"&gt;1628&lt;/span&gt; ***************
+D    &lt;span class="m"&gt;1307&lt;/span&gt; ************
+E    &lt;span class="m"&gt;4293&lt;/span&gt; ****************************************
+F     &lt;span class="m"&gt;804&lt;/span&gt; *******
+G     &lt;span class="m"&gt;716&lt;/span&gt; ******
+H    &lt;span class="m"&gt;1266&lt;/span&gt; ***********
+I    &lt;span class="m"&gt;2971&lt;/span&gt; ***************************
+J     &lt;span class="m"&gt;149&lt;/span&gt; *
+K     &lt;span class="m"&gt;168&lt;/span&gt; *
+L    &lt;span class="m"&gt;1518&lt;/span&gt; **************
+M     &lt;span class="m"&gt;995&lt;/span&gt; *********
+N    &lt;span class="m"&gt;2679&lt;/span&gt; ************************
+O    &lt;span class="m"&gt;2571&lt;/span&gt; ***********************
+P     &lt;span class="m"&gt;909&lt;/span&gt; ********
+Q      &lt;span class="m"&gt;49&lt;/span&gt; 
+R    &lt;span class="m"&gt;2664&lt;/span&gt; ************************
+S    &lt;span class="m"&gt;2628&lt;/span&gt; ************************
+T    &lt;span class="m"&gt;3456&lt;/span&gt; ********************************
+U     &lt;span class="m"&gt;967&lt;/span&gt; *********
+V     &lt;span class="m"&gt;432&lt;/span&gt; ****
+W     &lt;span class="m"&gt;466&lt;/span&gt; ****
+X      &lt;span class="m"&gt;79&lt;/span&gt; 
+Y     &lt;span class="m"&gt;448&lt;/span&gt; ****
+Z      36
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="mírně pokročilý"></category><category term="slovník"></category></entry><entry><title>Začátečnické cvičení</title><link href="http://spseol.github.io/ulprog/zacatecnicke-cviceni.html" rel="alternate"></link><updated>2015-05-05T22:24:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-05-05:ulprog/zacatecnicke-cviceni.html</id><summary type="html">&lt;p&gt;Zde je několik málo úloh na procvičení podmínek a cyklů. Vstup je brán vždy z
+klávesnice. Můžete použít funkci &lt;code&gt;input()&lt;/code&gt; nebo &lt;code&gt;raw_input()&lt;/code&gt;. Pro tisk
+použijte funkci &lt;code&gt;print&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;retezec&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;raw_input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;zadej libovolný řetězec&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;cislo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;zadej číslo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;retezec&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cislo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;retezec&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cislo&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Také se bude jistě hodit metoda &lt;code&gt;str.split()&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;retezec&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;1  2  abc d eee      ff&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;seznam&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;retezec&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;seznam&lt;/span&gt;
+&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seznam&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Je dána posloupnost znaků. Určete počet různých sudých &lt;strong&gt;cifer&lt;/strong&gt;, které se
+    zde nacházejí.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;zadej znaky &amp;gt; 23 15 ahoj 18 jedna 9 4441
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; v tomto řetězci je 5 sudých cifer
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Je dána posloupnost celých čísel oddělených mezerou. 
+    Pro záporná čísla vypište na obrazovku jejich druhou mocninu. 
+    Pro kladná čísla vypište na obrazovku jejich odmocninu.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;zadej čísla &amp;gt; 9 -9 -12 3 2
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; 3 81 144 1.7320 1.4142
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Je dána posloupnost celých čísel. Přerovnejte čísla tak, aby na začátku
+    posloupnosti byla všechna záporná čísla v původním pořadí a za nimi
+    všechna nezáporná čísla opět se zachováním jejich původního pořadí. Upravenou
+    posloupnost vypište.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;zadej čísla &amp;gt; -12 5 4 8 9 -1 
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; -12 -1 5 4 8 9
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Je dána posloupnost celých čísel. Přerovnejte čísla tak, aby na začátku
+    posloupnosti byla všechna záporná čísla v původním pořadí a za nimi všechna
+    nezáporná čísla v &lt;strong&gt;opačném&lt;/strong&gt; pořadí. Upravenou posloupnost vypište.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;zadej čísla &amp;gt; -12 5 4 8 9 -1 
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; -12 -1 9 8 4 5
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="podmínky a cykly"></category><category term="začátečník"></category></entry><entry><title>Seznamy a slovníky</title><link href="http://spseol.github.io/ulprog/seznamy-a-slovniky.html" rel="alternate"></link><updated>2015-05-05T22:15:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-05-05:ulprog/seznamy-a-slovniky.html</id><summary type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Vytvořte &lt;code&gt;tuple&lt;/code&gt; aritmetické posloupnosti o 30 položkách podle následující vzoru:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(3,7,11,15,19, ...)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vytvořte &lt;code&gt;tuple&lt;/code&gt; obsahující mocniny dvou menší než 10000.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(1,2,4,...,8192)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vytvořte &lt;code&gt;list&lt;/code&gt; podle následujícího vzoru:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[2,1,4,3,6,5,...,98,97,100,99]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vytvořte &lt;code&gt;list&lt;/code&gt;, který bude mít 20 hodnot podle následujícího vzoru:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[1,2,3,10,20,30,100,200,300,....]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vytvořte &lt;code&gt;list&lt;/code&gt;, který bude podle následujícího vzoru obsahovat čísla větší než 10:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[1000, 500, 250, 125, ... ]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Vytvořte slovník &lt;code&gt;dict&lt;/code&gt;. Klíčem bude vždy velké písmeno abecedy. Ke každému
+   písmenu bude příslušet jeho hodnota v &lt;a href="http://cs.wikipedia.com/wiki/ASCII"&gt;ASCII&lt;/a&gt; tabulce. Tu zjistíme
+   pomocí funkce &lt;code&gt;ord(znak)&lt;/code&gt;. Dalším pomocníkem může být funkce &lt;code&gt;chr(cislo)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{'A': 65, 'B': 66, 'C': 67, ... 'Z':90}&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vytvořte slovník &lt;code&gt;dict&lt;/code&gt;, který je uspořádán přesně opačně než je předchozí
+   příklad. Můžete použít funkci &lt;code&gt;chr(hodnota)&lt;/code&gt; nebo &lt;code&gt;ord(znak)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{65: 'A', 66: 'B', 67: 'C', ... 90: 'Z'}&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vytvořte &lt;code&gt;tuple&lt;/code&gt; obsahující všechna písmena velké a malé abecedy.
+   Můžete použít funkci &lt;code&gt;chr(hodnota)&lt;/code&gt; nebo &lt;code&gt;ord(znak)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;('A','B',...'a','b',...)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="python"></category><category term="datové typy"></category><category term="začátečník"></category><category term="podmínky a cykly"></category></entry><entry><title>Základní datové typy</title><link href="http://spseol.github.io/ulprog/zakladni-datove-typy.html" rel="alternate"></link><updated>2015-05-05T22:09:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-05-05:ulprog/zakladni-datove-typy.html</id><summary type="html">&lt;p&gt;Vytvořte následující proměnné a proveďte s mini požadované operace:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt; bude obsahovat reálné číslo 3,1415.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f&lt;/code&gt; bude obsahovat reálné číslo 3.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; bude obsahovat celé číslo 125.&lt;/li&gt;
+&lt;li&gt;Sečtěte &lt;code&gt;r&lt;/code&gt; a &lt;code&gt;f&lt;/code&gt; a &lt;code&gt;c&lt;/code&gt; a výsledek převeďte na celé číslo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;z&lt;/code&gt; bude obsahovat komplexní číslo (3+4i)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; bude řetězec s vašim jménem a příjmením&lt;/li&gt;
+&lt;li&gt;Z řetězce &lt;code&gt;s&lt;/code&gt; udělejte výřez, který obsahuje pouze 
+   vaše PŘÍJMENÍ a vypište ho velkými písmeny.&lt;/li&gt;
+&lt;li&gt;Převeďte řetězec "1234" na reálné číslo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p&lt;/code&gt; bude seznam (list) vyučovacích hodin, které dnes máte.
+   (Zkratky vyučovacích předmětů.)&lt;/li&gt;
+&lt;li&gt;Vypište délku seznamu &lt;code&gt;p&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;První vyučovací hodinu změňte na "TEV"&lt;/li&gt;
+&lt;li&gt;Vypište poslední vyučovací hodinu.&lt;/li&gt;
+&lt;li&gt;Udělejte &lt;strong&gt;kopii&lt;/strong&gt; (tj. nový objekt) seznamu, na který ukazuje proměnná &lt;code&gt;p&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Převeďte seznam (list) na n-tici (tuple).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="poslopnosti-tuple-list"&gt;Poslopnosti -- &lt;code&gt;tuple&lt;/code&gt;, &lt;code&gt;list&lt;/code&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Vytvořte proměnnou &lt;code&gt;a&lt;/code&gt; obsahující &lt;code&gt;tuple&lt;/code&gt; složené z čísel 10, 20, 30 ... 100.&lt;/li&gt;
+&lt;li&gt;Vytvořte proměnnou &lt;code&gt;b&lt;/code&gt; obsahující prázdný &lt;code&gt;tuple&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Vytvořte proměnnou &lt;code&gt;c&lt;/code&gt; obsahující jedno-položkové &lt;code&gt;tuple&lt;/code&gt; s vaším křestním jménem.&lt;/li&gt;
+&lt;li&gt;Proměnná &lt;code&gt;vsechno&lt;/code&gt; spojuje proměnné &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt; a &lt;code&gt;c&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Vytvořte proměnnou &lt;code&gt;cara&lt;/code&gt; typu &lt;code&gt;list&lt;/code&gt;, která bude obsahovat 80 znaků &lt;code&gt;=&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Z proměnné &lt;code&gt;a&lt;/code&gt; vyřežte posledních 5 položek.&lt;/li&gt;
+&lt;li&gt;Z proměnné &lt;code&gt;a&lt;/code&gt; vyřežte každou druhou položku: &lt;code&gt;10,30,50,70,90&lt;/code&gt; ale také &lt;code&gt;20,40,60,80,100&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Vytvořte/předělejte proměnnou &lt;code&gt;l&lt;/code&gt; stejného obsahu jako &lt;code&gt;a&lt;/code&gt;, ale datového typu &lt;code&gt;tuple&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Z proměnné &lt;code&gt;l&lt;/code&gt; vyřežte 5 prostředních položek a obraťte jejich pořadí.&lt;/li&gt;
+&lt;li&gt;Na konec seznamu &lt;code&gt;l&lt;/code&gt; vložte slovo &lt;code&gt;škola&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Doprostřed seznamu &lt;code&gt;l&lt;/code&gt; vložte slova &lt;code&gt;jedna&lt;/code&gt;, &lt;code&gt;dva&lt;/code&gt;, &lt;code&gt;tři&lt;/code&gt;. Každé jako jedenu položku seznamu.&lt;/li&gt;
+&lt;li&gt;Seřaďte seznam &lt;code&gt;l&lt;/code&gt; od největšího k nejmenšímu.&lt;/li&gt;
+&lt;li&gt;Se seznamu odeberte slova &lt;code&gt;jedna&lt;/code&gt;, &lt;code&gt;dva&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Se seznamu odeberte první a poslední položku.&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="python"></category><category term="datové typy"></category><category term="začátečník"></category></entry><entry><title>3A</title><link href="http://spseol.github.io/ulprog/3a.html" rel="alternate"></link><updated>2015-04-30T11:43:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-04-30:ulprog/3a.html</id><summary type="html">&lt;p&gt;Úlohy pro třídu 3A.&lt;/p&gt;</summary></entry><entry><title>Kalendář</title><link href="http://spseol.github.io/ulprog/kalendar.html" rel="alternate"></link><updated>2015-04-30T09:39:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-04-30:ulprog/kalendar.html</id><summary type="html">&lt;p&gt;Vypište na obrazovku kalendář ve tvaru:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;Po Út St Čt Pá So Ne
     1  2  3  4  5  6  
  7  8  9 10 11 12 13  
@@ -16,19 +222,19 @@ umí vypsat! Je potřeba jej opravdu naprogramovat.&lt;/p&gt;
 Pro začátek stačí, když program bude načítat první den v týdnu, který připadá 
 na první den měsíce. Například program, generující výše zmíněnou ukázku by přijal 
 jako vstup číslo &lt;code&gt;2&lt;/code&gt;, protože měsíc začíná úterkem.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;month&lt;/span&gt;
-&lt;span class="mi"&gt;10&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;day&lt;/span&gt;
-&lt;span class="mi"&gt;30&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;year&lt;/span&gt;
-&lt;span class="mi"&gt;2012&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;weekday&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;weekday&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="mi"&gt;2&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;weekday&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="mi"&gt;6&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dayCount&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="podmínky"></category><category term="cykly"></category><category term="mírně pokročilý"></category></entry></feed>
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;month&lt;/span&gt;
+&lt;span class="go"&gt;10&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;day&lt;/span&gt;
+&lt;span class="go"&gt;30&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;year&lt;/span&gt;
+&lt;span class="go"&gt;2012&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;weekday&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="go"&gt;1&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;weekday&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="go"&gt;2&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2012&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;weekday&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="go"&gt;6&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;dayCount&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="podmínky a cykly"></category><category term="mírně pokročilý"></category></entry></feed>

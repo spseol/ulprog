@@ -9,6 +9,7 @@
     <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/highlight.css' type="text/css" media="all" />
     <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/pygment.css' type="text/css" media="all" />
     <link href="http://spseol.github.io/ulprog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Full Atom Feed" />
+    <link href="http://spseol.github.io/ulprog/feeds/uloha.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Categories Atom Feed" />
     
 </head>
 
@@ -29,73 +30,122 @@
     </header>
     <section id="wrapper" class="clearfix">
         <section id="content" class="grid col-620" >
-<h4 class="content-archive">Articles tagged with <span style="color:rgb(0,102,204)">mírně pokročilý</span>: </h4>
                 <section class="breadcrumb-list">
-<a href="http://spseol.github.io/ulprog">UlProg</a> ››Tag: <a href="tag/mirne-pokrocily.html">mírně pokročilý</a>
+<a href="http://spseol.github.io/ulprog">UlProg</a> ›<a href="category/uloha.html">uloha</a> ›Četnost znaků
                 </section>
 
 
-<ul>
-<li class="posts"><article class="post hentry">
-	<header>
-		<h2 class="post-title" >
-			<a href="http://spseol.github.io/ulprog/cetnost-znaku.html" rel="bookmark" title="Permalink to Četnost znaků">Četnost znaků</a>
-		</h2>
-		<div class="post-info">
-			<span class="post-lable">Post in</span>
-			<abbr class="date" title="2015-05-05T22:34:00"> 
-				<a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Út 05 květen 2015 </a>
-			</abbr>
-			<!-- COMMENTS -->
-		</div>
-	</header>
-	<div class="summary"><p>Vytvořte program, který ze standardního vstupu nebo ze souboru načte text a
+<section id="post" class="post hentry">
+    <header>
+    <h2 class="post-title" >Četnost znaků</h2>
+    
+    <div class="post-meta">
+        <span class="meta-prep">Post in</span>
+        <abbr class="date" title="2015-05-05T22:34:00"> 
+            <a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Út 05 květen 2015 </a>
+        </abbr>
+        <span class="meta-prep"> |Tags</span>
+                <a href="http://spseol.github.io/ulprog/tag/mirne-pokrocily.html">mírně pokročilý</a>
+                <a href="http://spseol.github.io/ulprog/tag/slovnik.html">slovník</a>
+        <!-- TOBE COMMENTS -->
+    </div>
+    </header>
+    <div class="post-entry">
+        <p>Vytvořte program, který ze standardního vstupu nebo ze souboru načte text a
 vypíše četnosti jednotlivých znaků textu na obrazovku. Četnosti znaků zobrazte
 nejen jako číselný údaj ale i graficky pomocí jednoduchého horizontálního
 bargrafu. Až se vám bargraf povede udělat horizontálně udělejte ho vertikálně.</p>
 <h2 id="mala-pomoc">Malá pomoc:</h2>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">stdin</span><span class="p">,</span> <span class="n">stdout ...</span></pre></div></div>
-	<footer>
-		<span class="post-lable">Category:</span>
-		<abbr class="category">
-			<a href="http://spseol.github.io/ulprog/category/uloha.html">uloha</a>
-		</abbr>
-	</footer>
-	<hr />
-</article></li>
-<li class="posts"><article class="post hentry">
-	<header>
-		<h2 class="post-title" >
-			<a href="http://spseol.github.io/ulprog/kalendar.html" rel="bookmark" title="Permalink to Kalendář">Kalendář</a>
-		</h2>
-		<div class="post-info">
-			<span class="post-lable">Post in</span>
-			<abbr class="date" title="2015-04-30T09:39:00"> 
-				<a href="http://spseol.github.io/ulprog/archive/2015/dub/index.html">Čt 30 duben 2015 </a>
-			</abbr>
-			<!-- COMMENTS -->
-		</div>
-	</header>
-	<div class="summary"><p>Vypište na obrazovku kalendář ve tvaru:</p>
-<div class="highlight"><pre>Po Út St Čt Pá So Ne
-    1  2  3  4  5  6  
- 7  8  9 10 11 12 13  
-14 15 16 17 18 19 20  
-21 22 23 24 25 26 27  
-28 29 30 31
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span>
+
+<span class="n">cetnosti</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="o">...</span>
+    <span class="o">...</span>
+
+<span class="c"># tiskne seřazené četnosti</span>
+<span class="k">for</span> <span class="n">znak</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cetnosti</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+    <span class="k">print</span> <span class="n">znak</span><span class="p">,</span><span class="s">&#39;-&gt;&#39;</span><span class="p">,</span><span class="n">cetnosti</span><span class="p">[</span><span class="n">znak</span><span class="p">]</span>
+
+<span class="c"># poměrně neefektvní zjištění maximální četnosti znaku</span>
+<span class="n">hodnoty</span> <span class="o">=</span> <span class="n">cetnosti</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>  <span class="c"># všechny hodnoty ve slovníku</span>
+<span class="n">hodnoty</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>               <span class="c"># seřadím je</span>
+<span class="n">hodnoty</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>            <span class="c"># nejčetnější je na začátku</span>
+<span class="k">print</span> <span class="s">&quot;nejčetnější znak je zastoupen&quot;</span><span class="p">,</span> <span class="n">hodnoty</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span> <span class="s">&quot;krát&quot;</span>
+
+<span class="k">print</span> <span class="mi">20</span><span class="o">*</span><span class="s">&quot;*&quot;</span>
 </pre></div>
 
 
-<p>Tato úloha nespočívá v pouhém nalezení ...</p></div>
-	<footer>
-		<span class="post-lable">Category:</span>
-		<abbr class="category">
-			<a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
-		</abbr>
-	</footer>
-	<hr />
-</article></li>
-</ul>
+<h2 id="priklad-pouziti-programu">Příklad použití programu</h2>
+<p>Můžete si jednoduše ověřit, proč se v Morseově abecedě píše <code>E</code> jako <code>.</code>:</p>
+<div class="highlight"><pre><span class="nv">$ </span>w3m -dump <span class="s1">&#39;http://en.wikipedia.org/wiki/Transistor&#39;</span> <span class="p">|</span> cstocs utf-8 ascii <span class="p">|</span> cetnost-znaku.py
+<span class="m">0</span>     <span class="m">245</span> **
+<span class="m">1</span>     <span class="m">222</span> **
+<span class="m">2</span>     <span class="m">223</span> **
+<span class="m">3</span>      <span class="m">97</span> 
+<span class="m">4</span>      <span class="m">88</span> 
+<span class="m">5</span>     <span class="m">124</span> *
+<span class="m">6</span>      <span class="m">59</span> 
+<span class="m">7</span>      <span class="m">73</span> 
+<span class="m">8</span>      <span class="m">54</span> 
+<span class="m">9</span>     <span class="m">109</span> *
+A    <span class="m">2914</span> ***************************
+B     <span class="m">637</span> *****
+C    <span class="m">1628</span> ***************
+D    <span class="m">1307</span> ************
+E    <span class="m">4293</span> ****************************************
+F     <span class="m">804</span> *******
+G     <span class="m">716</span> ******
+H    <span class="m">1266</span> ***********
+I    <span class="m">2971</span> ***************************
+J     <span class="m">149</span> *
+K     <span class="m">168</span> *
+L    <span class="m">1518</span> **************
+M     <span class="m">995</span> *********
+N    <span class="m">2679</span> ************************
+O    <span class="m">2571</span> ***********************
+P     <span class="m">909</span> ********
+Q      <span class="m">49</span> 
+R    <span class="m">2664</span> ************************
+S    <span class="m">2628</span> ************************
+T    <span class="m">3456</span> ********************************
+U     <span class="m">967</span> *********
+V     <span class="m">432</span> ****
+W     <span class="m">466</span> ****
+X      <span class="m">79</span> 
+Y     <span class="m">448</span> ****
+Z      36
+</pre></div>
+    </div><!-- /.entry-content -->
+    <footer class="post-meta">
+        <span class="meta-prep">Category:</span>
+        <abbr class="category">
+            <a href="http://spseol.github.io/ulprog/category/uloha.html">uloha</a>
+        </abbr>
+    </footer>
+    <section id="respond">
+        <div id="disqus_thread">
+        <script type="text/javascript">
+        var disqus_identifier = "cetnost-znaku.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        </div>
+
+    </section>
+</section>
+
+
         </section><!-- #content -->
         <section id="widgets" class="grid col-300 fit" >
             <!--
