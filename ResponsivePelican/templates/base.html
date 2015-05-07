@@ -6,9 +6,9 @@
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" id="responsive-style-css"  href='{{ SITEURL }}/theme/css/style.css' type="text/css" media="all" />
-    <link rel="stylesheet" id="responsive-style-css"  href='{{ SITEURL }}/theme/css/highlight.css' type="text/css" media="all" />
-    <link rel="stylesheet" id="responsive-style-css"  href='{{ SITEURL }}/theme/css/pygment.css' type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href="{{ SITEURL }}/theme/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href="{{ SITEURL }}/theme/css/highlight.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href="{{ SITEURL }}/theme/css/pygment.css" type="text/css" media="all" />
     {% if FEED_ALL_ATOM %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
     {% endif %}
@@ -35,6 +35,30 @@
     {% endif %}
     
     {% endblock head %}
+
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="{{ SITEURL }}/theme/js/juuu.js"></script>
+  {% raw %}
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['\$','\$'], ['\\\\(','\\\\)']]}});
+  MathJax.Hub.Config({ TeX: { extensions: ["autobold.js"] }});
+  MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+  MathJax.Hub.Config({ "HTML-CSS": { styles: { ".MathJax .mo, .MathJax .mi": {color: "black ! important"}} } });
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+    MathJax.InputJax.TeX.Definitions.Add({
+      macros: {
+        expexpansion: ["Macro", "\\sum_{n=0}^{+\\infty} \\frac{x^n}{n!}"],
+        taylor: ["Macro","\\sum_{n=0}^{+\\infty} \\frac{{#1}^{(n)} \\left({#2}\\right)}{n!} {\\left( {#3} - {#2} \\right)}^n", 3],
+        taylorlog: ["Macro","\\sum_{n=1}^{+\\infty} {(-1)}^{n+1} \\frac{#1^n}{n}", 1],
+        taylorsin: ["Macro","\\sum_{n=0}^{+\\infty} \\frac{{(-1)}^n}{(2n+1)!} {#1}^{2n+1}", 1]
+      }
+    });
+  });
+  </script>
+  {% endraw %}
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+  </script>
 </head>
 
 <body id="index" class="blog">
@@ -70,6 +94,9 @@
             {% endif%}
           {% endfor %}
         {% endfor %}
+
+            <li><a href="{{ SITEURL }}/tags.html" >Tagy</a></li>
+            <li><a href="{{ SITEURL }}/archives.html" >Archiv</a></li>
 
         </ul></nav><!-- /#menu -->
     </header>

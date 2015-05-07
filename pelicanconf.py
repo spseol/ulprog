@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Marek'
-SITENAME = u'\xdalohy pro v\xfduku programov\xe1n\xed'
-SITEURL = 'http://spseol.github.io/ulprog/'
+SITENAME = u'Úlohy pro výuku programování'
+SITEURL = 'http://spseol.github.io/ulprog'
 
 PATH = 'content'
 
