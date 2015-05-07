@@ -1,6 +1,6 @@
 Title: Četnost znaků
 Date: 2015-05-05 22:34
-Category: uloha
+Category: úloha
 Tags: mírně pokročilý, slovník
 Author: Marek Nožka
 
