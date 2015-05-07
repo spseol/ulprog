@@ -20,8 +20,9 @@ Složitě řečeno
 4. V modálním okně vyberte váš účet a vyčtejte na naklonování repozitáře do vašeho účtu.
 5. V adresáři `content/` přidejte či upravte úlohu - buď přímo online na webu nebo na vašem PC ([jak na to?](http://www.fuzzy.cz/cs/clanky/git-kapitola-3-vyvoj-s-gitem/#how-to-make-a-commit))
 6. Jakmile budete mít změny hotové celistvě hotové, vytvořte **Pull Request** (dále jen P&R) pomocí zeleného tlačítka na detailu vašeho repozitáře umístěného vlevo od indikátoru aktuální větve.
-7. Na následující stránce detailu P&R popište, co jste přidali, co změnili, případně co je třeba ještě dodělat.
+7. Potvrďte vytvoření P&R z vašich dosavadních změn ve větvi. 
+8. V následujícím okně s detailem P&R popište, co jste přidali, co změnili, případně co je třeba ještě dodělat.
     * I po vytvoření P&R lze upravovat kód - stačí provést standartní postup s příkazy `add`, `commit`, `push`.
-8. Následně vytvořený P&R odešlete a vyčtejte na komentáře od majitelů původního repozitáře.
-9. Můžeme vám pogratulovat a poděkovat, váš kód byl přidán na [spseol.github.io](spseol.github.io)!
+9. Následně vytvořený P&R odešlete a vyčtejte na komentáře od majitelů původního repozitáře.
+10. Můžeme vám pogratulovat a poděkovat, váš kód byl přidán na [spseol.github.io](spseol.github.io)!
 
