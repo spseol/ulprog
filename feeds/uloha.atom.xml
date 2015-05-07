@@ -1,5 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Úlohy pro výuku programování</title><link href="http://spseol.github.io/ulprog/" rel="alternate"></link><link href="http://spseol.github.io/ulprog/feeds/uloha.atom.xml" rel="self"></link><id>http://spseol.github.io/ulprog/</id><updated>2015-05-05T22:34:00+02:00</updated><entry><title>Četnost znaků</title><link href="http://spseol.github.io/ulprog/cetnost-znaku.html" rel="alternate"></link><updated>2015-05-05T22:34:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-05-05:ulprog/cetnost-znaku.html</id><summary type="html">&lt;p&gt;Vytvořte program, který ze standardního vstupu nebo ze souboru načte text a
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Úlohy pro výuku programování</title><link href="http://spseol.github.io/ulprog/" rel="alternate"></link><link href="http://spseol.github.io/ulprog/feeds/uloha.atom.xml" rel="self"></link><id>http://spseol.github.io/ulprog/</id><updated>2015-05-07T23:12:00+02:00</updated><entry><title>Exponenciální funkce</title><link href="http://spseol.github.io/ulprog/exponencialni-funkce.html" rel="alternate"></link><updated>2015-05-07T23:12:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-05-07:ulprog/exponencialni-funkce.html</id><summary type="html">&lt;p&gt;Vytvořte funkci &lt;code&gt;myexp&lt;/code&gt;, která bude realizovat výpočet 
+&lt;a href="http://cs.wikipedia.org/wiki/Exponenciální_funkce"&gt;exponenciální funkce&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;myexp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myexp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pro výpočet použijte
+&lt;a href="https://cs.wikipedia.org/wiki/Taylorova_%C5%99ada"&gt;Taylorovu řadu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$$e^x=1+\frac{x}{1!} + \frac{x^2}{2!}+...+\frac{x^n}{n!}$$&lt;/p&gt;
+&lt;p&gt;tedy&lt;/p&gt;
+&lt;p&gt;$$
+e^x=1+\frac{x}{1} + \frac{x\cdot x}{1\cdot2}+
+   \frac{x\cdot x \cdot x}{1 \cdot 2 \cdot 3} + 
+   \frac{x\cdot x \cdot x \cdot x}{1 \cdot 2 \cdot 3 \cdot 4} + ...
+$$&lt;/p&gt;
+&lt;p&gt;Řada je nekonečná ale konvergentní, takže velikost každého dalšího členu se
+zmenšuje. Výpočet tedy zastavíme až jeho velikost neovlivní námi požadovanou
+přesnost výsledku. Tedy například až bude menší než $10^{-5}$.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;strong&gt;Malá rada&lt;/strong&gt;:&lt;/dt&gt;
+&lt;dd&gt;Všimněte si, že každý další člen posloupnosti je tvoře předchozím členem krát
+  $\frac{x}{n}$.&lt;/dd&gt;
+&lt;/dl&gt;</summary><category term="mírně pokročilý"></category><category term="podmínky a cykly"></category><category term="funkce"></category></entry><entry><title>Fibonacciho posloupnost</title><link href="http://spseol.github.io/ulprog/fibonacciho-posloupnost.html" rel="alternate"></link><updated>2015-05-07T16:47:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-05-07:ulprog/fibonacciho-posloupnost.html</id><summary type="html">&lt;p&gt;&lt;a href="https://cs.wikipedia.org/wiki/Fibonacciho_posloupnost"&gt;Fibonacciho posloupnost&lt;/a&gt;
+je dána předpisem: &lt;/p&gt;
+&lt;p&gt;$$
+ F(n)=
+  \left\{
+   \begin{matrix}
+    0\,,\qquad\qquad\qquad\quad\,\ \ \,&amp;amp;&amp;amp;\mbox{pro }n=0\,;\ \ \\
+    1,\qquad\qquad\qquad\qquad\,&amp;amp;&amp;amp;\mbox{pro }n=1;\ \ \,\\
+    F(n-1)+F(n-2)&amp;amp;&amp;amp;\mbox{pro }n&amp;gt;1
+   \end{matrix}
+  \right.
+$$&lt;/p&gt;
+&lt;p&gt;Jednoduše řečeno: každý další člen posloupnosti je součtem předchozích dvou členů.&lt;/p&gt;
+&lt;h2 id="1-program"&gt;1. Program&lt;/h2&gt;
+&lt;p&gt;Vytvořte program, který na obrazovku vytiskne prvních N členů 
+&lt;a href="http://cs.wikipedia.org/wiki/Fibonacciho_posloupnost"&gt;Fibonacciho posloupnosti&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="priklad-komunikace-programu"&gt;Příklad komunikace programu:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Zadej počet členů: 9
+&amp;gt;&amp;gt;&amp;gt; 0, 1, 1, 2, 3, 5, 8, 13, 21
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="2-funkce"&gt;2. Funkce&lt;/h2&gt;
+&lt;p&gt;Svůj původní program předělejte: vytvořte funkci, která bude vracet
+&lt;em&gt;n-tý&lt;/em&gt; člen fibonacciho posloupnosti.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+ &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="3-rekurze"&gt;3. Rekurze&lt;/h2&gt;
+&lt;p&gt;Opět vytvořte funkci, která vrací &lt;em&gt;n-tý&lt;/em&gt; člen fibonacciho posloupnosti, ale 
+tentokrát s využitím &lt;a href=""&gt;rekurze&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fibR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;fibR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;fibR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Porovnejte rychlosti výpočtu:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fibR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="4-generator-a-iterator"&gt;4. Generátor a iterátor&lt;/h2&gt;
+&lt;p&gt;Na závěr si pohrajte s &lt;a href="http://diveintopython3.py.cz/generators.html#generators"&gt;generátory&lt;/a&gt; a &lt;a href="http://diveintopython3.py.cz/iterators.html"&gt;iterátory&lt;/a&gt;
+a vytvořte si svůj vlastní &lt;a href="http://diveintopython3.py.cz/generators.html#generators"&gt;generátor&lt;/a&gt; a &lt;a href="http://diveintopython3.py.cz/iterators.html"&gt;iterátor&lt;/a&gt; pro fibonacciho 
+posloupnost. (Můžete si také připomenout jak vypadá &lt;a href="http://diveintopython3.py.cz/comprehensions.html"&gt;generátorová notace&lt;/a&gt;.)&lt;/p&gt;</summary><category term="mírně pokročilý"></category><category term="podmínky a cykly"></category><category term="rekurze"></category><category term="funkce"></category></entry><entry><title>Četnost znaků</title><link href="http://spseol.github.io/ulprog/cetnost-znaku.html" rel="alternate"></link><updated>2015-05-05T22:34:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:spseol.github.io,2015-05-05:ulprog/cetnost-znaku.html</id><summary type="html">&lt;p&gt;Vytvořte program, který ze standardního vstupu nebo ze souboru načte text a
 vypíše četnosti jednotlivých znaků textu na obrazovku. Četnosti znaků zobrazte
 nejen jako číselný údaj ale i graficky pomocí jednoduchého horizontálního
 bargrafu. Až se vám bargraf povede udělat horizontálně udělejte ho vertikálně.&lt;/p&gt;

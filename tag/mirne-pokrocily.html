@@ -5,11 +5,34 @@
     <title>Úlohy pro výuku programování</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/style.css' type="text/css" media="all" />
-    <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/highlight.css' type="text/css" media="all" />
-    <link rel="stylesheet" id="responsive-style-css"  href='http://spseol.github.io/ulprog/theme/css/pygment.css' type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href="http://spseol.github.io/ulprog/theme/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href="http://spseol.github.io/ulprog/theme/css/highlight.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href="http://spseol.github.io/ulprog/theme/css/pygment.css" type="text/css" media="all" />
     <link href="http://spseol.github.io/ulprog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Full Atom Feed" />
     
+
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://spseol.github.io/ulprog/theme/js/juuu.js"></script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['\$','\$'], ['\\\\(','\\\\)']]}});
+  MathJax.Hub.Config({ TeX: { extensions: ["autobold.js"] }});
+  MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+  MathJax.Hub.Config({ "HTML-CSS": { styles: { ".MathJax .mo, .MathJax .mi": {color: "black ! important"}} } });
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+    MathJax.InputJax.TeX.Definitions.Add({
+      macros: {
+        expexpansion: ["Macro", "\\sum_{n=0}^{+\\infty} \\frac{x^n}{n!}"],
+        taylor: ["Macro","\\sum_{n=0}^{+\\infty} \\frac{{#1}^{(n)} \\left({#2}\\right)}{n!} {\\left( {#3} - {#2} \\right)}^n", 3],
+        taylorlog: ["Macro","\\sum_{n=1}^{+\\infty} {(-1)}^{n+1} \\frac{#1^n}{n}", 1],
+        taylorsin: ["Macro","\\sum_{n=0}^{+\\infty} \\frac{{(-1)}^n}{(2n+1)!} {#1}^{2n+1}", 1]
+      }
+    });
+  });
+  </script>
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+  </script>
 </head>
 
 <body id="index" class="blog">
@@ -28,6 +51,9 @@
 
               <li><a href="http://spseol.github.io/ulprog/3a.html" >Zadání: 3A</a></li>
 
+            <li><a href="http://spseol.github.io/ulprog/tags.html" >Tagy</a></li>
+            <li><a href="http://spseol.github.io/ulprog/archives.html" >Archiv</a></li>
+
         </ul></nav><!-- /#menu -->
     </header>
     <section id="wrapper" class="clearfix">
@@ -39,6 +65,78 @@
 
 
 <ul>
+<li class="posts"><article class="post hentry">
+	<header>
+		<h2 class="post-title" >
+			<a href="http://spseol.github.io/ulprog/exponencialni-funkce.html" rel="bookmark" title="Permalink to Exponenciální funkce">Exponenciální funkce</a>
+		</h2>
+		<div class="post-info">
+			<span class="post-lable">Post in</span>
+			<abbr class="date" title="2015-05-07T23:12:00"> 
+				<a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Čt 07 květen 2015 </a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+	</header>
+	<div class="summary"><p>Vytvořte funkci <code>myexp</code>, která bude realizovat výpočet 
+<a href="http://cs.wikipedia.org/wiki/Exponenciální_funkce">exponenciální funkce</a>.</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">myexp</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">myexp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+
+<p>Pro výpočet použijte
+<a href="https://cs.wikipedia.org/wiki/Taylorova_%C5%99ada">Taylorovu řadu</a></p>
+<p>$$e^x=1+\frac{x}{1!} + \frac{x^2}{2!}+...+\frac{x^n}{n!}$$</p>
+<p>tedy</p>
+<p>$$
+e^x=1+\frac{x}{1} + \frac{x\cdot x ...</p></div>
+	<footer>
+		<span class="post-lable">Category:</span>
+		<abbr class="category">
+			<a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
+		</abbr>
+	</footer>
+	<hr />
+</article></li>
+<li class="posts"><article class="post hentry">
+	<header>
+		<h2 class="post-title" >
+			<a href="http://spseol.github.io/ulprog/fibonacciho-posloupnost.html" rel="bookmark" title="Permalink to Fibonacciho posloupnost">Fibonacciho posloupnost</a>
+		</h2>
+		<div class="post-info">
+			<span class="post-lable">Post in</span>
+			<abbr class="date" title="2015-05-07T16:47:00"> 
+				<a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Čt 07 květen 2015 </a>
+			</abbr>
+			<!-- COMMENTS -->
+		</div>
+	</header>
+	<div class="summary"><p><a href="https://cs.wikipedia.org/wiki/Fibonacciho_posloupnost">Fibonacciho posloupnost</a>
+je dána předpisem: </p>
+<p>$$
+ F(n)=
+  \left\{
+   \begin{matrix}
+    0\,,\qquad\qquad\qquad\quad\,\ \ \,&amp;&amp;\mbox{pro }n=0\,;\ \ \\
+    1,\qquad\qquad\qquad\qquad\,&amp;&amp;\mbox{pro }n=1;\ \ \,\\
+    F(n-1)+F(n-2)&amp;&amp;\mbox{pro }n&gt;1
+   \end{matrix}
+  \right.
+$$</p>
+<p>Jednoduše řečeno: každý další člen posloupnosti je součtem předchozích dvou členů ...</p></div>
+	<footer>
+		<span class="post-lable">Category:</span>
+		<abbr class="category">
+			<a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
+		</abbr>
+	</footer>
+	<hr />
+</article></li>
 <li class="posts"><article class="post hentry">
 	<header>
 		<h2 class="post-title" >
@@ -61,7 +159,7 @@ bargrafu. Až se vám bargraf povede udělat horizontálně udělejte ho vertik�
 	<footer>
 		<span class="post-lable">Category:</span>
 		<abbr class="category">
-			<a href="http://spseol.github.io/ulprog/category/uloha.html">uloha</a>
+			<a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
 		</abbr>
 	</footer>
 	<hr />
@@ -118,7 +216,7 @@ bargrafu. Až se vám bargraf povede udělat horizontálně udělejte ho vertik�
                     Kategorie
                 </div>
                 <ul>
-                        <li><a href="http://spseol.github.io/ulprog/category/uloha.html" >uloha </a></li>
+                        <li><a href="http://spseol.github.io/ulprog/category/uloha.html" >úloha </a></li>
                         <li><a href="http://spseol.github.io/ulprog/category/zadani-pro-tridu.html" >zadání pro třídu </a></li>
                 </ul>
             </section>
@@ -128,18 +226,22 @@ bargrafu. Až se vám bargraf povede udělat horizontálně udělejte ho vertik�
                     TagCloud
                 </div>
                 <div>
+                    <span><a href="http://spseol.github.io/ulprog/tag/zacatecnik.html" style="font-size:calc(160% - 20%);"
+                        >#začátečník</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/datove-typy.html" style="font-size:calc(160% - 30%);"
+                        >#datové typy</a></span>
                     <span><a href="http://spseol.github.io/ulprog/tag/slovnik.html" style="font-size:calc(160% - 60%);"
                         >#slovník</a></span>
-                    <span><a href="http://spseol.github.io/ulprog/tag/python.html" style="font-size:calc(160% - 20%);"
-                        >#python</a></span>
-                    <span><a href="http://spseol.github.io/ulprog/tag/mirne-pokrocily.html" style="font-size:calc(160% - 20%);"
+                    <span><a href="http://spseol.github.io/ulprog/tag/mirne-pokrocily.html" style="font-size:calc(160% - 10%);"
                         >#mírně pokročilý</a></span>
-                    <span><a href="http://spseol.github.io/ulprog/tag/datove-typy.html" style="font-size:calc(160% - 20%);"
-                        >#datové typy</a></span>
-                    <span><a href="http://spseol.github.io/ulprog/tag/zacatecnik.html" style="font-size:calc(160% - 10%);"
-                        >#začátečník</a></span>
                     <span><a href="http://spseol.github.io/ulprog/tag/podminky-a-cykly.html" style="font-size:calc(160% - 10%);"
                         >#podmínky a cykly</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/rekurze.html" style="font-size:calc(160% - 60%);"
+                        >#rekurze</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/funkce.html" style="font-size:calc(160% - 30%);"
+                        >#funkce</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/python.html" style="font-size:calc(160% - 30%);"
+                        >#python</a></span>
                 </div>
             </section>
 
