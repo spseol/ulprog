@@ -2,13 +2,14 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+DEFAULT_DATE = 'fs'
 AUTHOR = u'Marek'
 SITENAME = u'Úlohy pro výuku programování'
 SITEURL = 'http://spseol.github.io/ulprog'
 
 PATH = 'content'
 
-THEME = 'ResponsivePelican'
+THEME = 'theme-myResponsivePelican'
 TAG_CLOUD_STEPS = 6
 TAG_CLOUD_MAX_ITEMS = 200
 
@@ -53,3 +54,6 @@ STATIC_PATHS = ['extra', ]
 EXTRA_PATH_METADATA = {'extra/README': {'path': 'README.md'},
                        'extra/.nojekyll': {'path': '.nojekyll'},
                        }
+
+PIWIK_URL = 'yanek.cz/piwik'
+PIWIK_SITE_ID = 6
