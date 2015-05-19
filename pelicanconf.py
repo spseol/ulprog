@@ -24,20 +24,42 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS = (('SPŠE Olomouc', 'http://www.spseol.cz/'),
-         ('spseol.github.io', 'http://spseol.github.io/'),
-         ('~Nožka', 'http://hroch.spseol.cz/~nozka/'),
+LINKS = (('Py.cz', 'http://py.cz'),
+         ('Python.cz', 'http://python.cz/'),
          ('Python.org', 'http://python.org/'),
-         ('Pelican', 'http://getpelican.com/'),
+         ('Python documentation', 'https://docs.python.org/'),
+         ('Česká encyklopedie algoritmů',
+          'http://www.itnetwork.cz/uzitecne-algoritmy-pro-programovani'),
+         ('Stack Overflow', 'http://stackoverflow.com/'),
+         ('Úvod do Tkinter ', 'http://tkinter.programujte.com'),
+         ('Tkinter reference',
+          'http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/index.html'),
+         ('Korespondenční seminář z programování', 'https://ksp.mff.cuni.cz/'),
+         ('CzechFlaskDoc', 'http://spseol.github.io/CzechFlaskDoc/'),
+         ('PyQt4Doc', 'http://spseol.github.io/PyQt4Doc/'),
+         ('PyGame -- české tutoriály', 'http://www.geon.wz.cz/pygame/'),
+         ('Jak se naučit programovat', 'http://jaksenaucitprogramovat.py.cz/'),
+         ('Učíme se programovat v jazyce Python 3', 'http://howto.py.cz/'),
+         ('Sallyx/Python', 'http://www.sallyx.org/sally/python/'),
+         ('Ponořme se do Pythonu 3',
+          'http://diveintopython3.py.cz/index.html'),
+         ('Létající cirkus', 'http://www.root.cz/serialy/letajici-cirkus/'),
+         ('MatPlotLib', 'http://hroch/~nozka/python/matplotlib/'),
+         # ('', ''),
          )
 
 # Social widget
 SOCIAL = (('GitHub', 'https://github.com/spseol/'),
+          ('spseol.github.io', 'http://spseol.github.io/'),
           ('Facebook', 'https://cs-cz.facebook.com/spseol'),
           ('G+', 'https://plus.google.com/118347382558771670752'),
+          ('SPŠE Olomouc', 'http://www.spseol.cz/'),
+          ('~Nožka', 'http://hroch.spseol.cz/~nozka/'),
+          ('Pelican', 'http://getpelican.com/'),
           )
 
 DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 20
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
