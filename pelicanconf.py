@@ -73,6 +73,11 @@ MD_EXTENSIONS = [
 ]
 
 STATIC_PATHS = ['extra', ]
+
+DOCUTILS_SETTINGS = {'smart_quotes': 'yes',
+                     'initial_header_level': 3,
+                     }
+
 EXTRA_PATH_METADATA = {'extra/README': {'path': 'README.md'},
                        'extra/.nojekyll': {'path': '.nojekyll'},
                        }

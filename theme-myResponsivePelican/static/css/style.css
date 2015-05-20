@@ -147,7 +147,7 @@ pre,
 kbd,
 samp,
 code {
-	font-family: monospace, serif;
+	font-family: Terminus, monospace, serif;
 	font-style: normal;
 }
 
@@ -1294,7 +1294,7 @@ form div {
 #logo {
 	float: left;
 	margin: 0;
-	font-family: "Bree Serif", "Segoe UI Light" ;
+	font-family: "Bree Serif", "Segoe UI Light", Georgia, "New York CE", utopia, serif ;
 	color: #555555;
 }
 
