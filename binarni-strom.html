@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="no-js" lang="cs">
+
+<head>
+    <title>Úlohy pro výuku programování</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" id="responsive-style-css"  href="http://spseol.github.io/ulprog/theme/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href="http://spseol.github.io/ulprog/theme/css/highlight.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href="http://spseol.github.io/ulprog/theme/css/pygment.css" type="text/css" media="all" />
+    <link href="http://spseol.github.io/ulprog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Full Atom Feed" />
+    <link href="http://spseol.github.io/ulprog/feeds/uloha.atom.xml" type="application/atom+xml" rel="alternate" title="Úlohy pro výuku programování Categories Atom Feed" />
+    
+
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://spseol.github.io/ulprog/theme/js/juuu.js"></script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['\$','\$'], ['\\\\(','\\\\)']]}});
+  MathJax.Hub.Config({ TeX: { extensions: ["autobold.js"] }});
+  MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+  MathJax.Hub.Config({ "HTML-CSS": { styles: { ".MathJax .mo, .MathJax .mi": {color: "black ! important"}} } });
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+    MathJax.InputJax.TeX.Definitions.Add({
+      macros: {
+        expexpansion: ["Macro", "\\sum_{n=0}^{+\\infty} \\frac{x^n}{n!}"],
+        taylor: ["Macro","\\sum_{n=0}^{+\\infty} \\frac{{#1}^{(n)} \\left({#2}\\right)}{n!} {\\left( {#3} - {#2} \\right)}^n", 3],
+        taylorlog: ["Macro","\\sum_{n=1}^{+\\infty} {(-1)}^{n+1} \\frac{#1^n}{n}", 1],
+        taylorsin: ["Macro","\\sum_{n=0}^{+\\infty} \\frac{{(-1)}^n}{(2n+1)!} {#1}^{2n+1}", 1]
+      }
+    });
+  });
+  </script>
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+  </script>
+</head>
+
+<body id="index" class="blog">
+<div id="container" class="hfeed">
+
+<a href="https://github.com/spseol/ulprog/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+
+    <header id="header" >
+        <div id="logo">
+          <h1><a href="http://spseol.github.io/ulprog"><img src="http://spseol.github.io/ulprog/theme/image/default-logo.png" alt="ulplog" width ="99"/></a>
+                Úlohy pro výuku programování</h1>
+        </div> <!-- /#logo-->
+        <nav id="menu" class="main-nav"><ul class="menu">
+            <li><a href="http://spseol.github.io/ulprog/pages/jak-prispet.html">Jak přispět?</a></li>
+            <li><a href="http://spseol.github.io/ulprog/pages/o-teto-strance.html">O této stránce</a></li>
+
+              <li><a href="http://spseol.github.io/ulprog/3a.html" >Zadání: 3A</a></li>
+
+            <li><a href="http://spseol.github.io/ulprog/tags.html" >Tagy</a></li>
+            <li><a href="http://spseol.github.io/ulprog/archives.html" >Archiv</a></li>
+
+        </ul></nav><!-- /#menu -->
+    </header>
+    <section id="wrapper" class="clearfix">
+        <section id="content" class="grid col-620" >
+                <section class="breadcrumb-list">
+<a href="http://spseol.github.io/ulprog">UlProg</a> ›<a href="category/uloha.html">úloha</a> ›Binární strom
+                </section>
+
+
+<section id="post" class="post hentry">
+    <header>
+    <h2 class="post-title" id="article-title">Binární strom</h2>
+    
+    <div class="post-meta">
+        <span class="meta-prep">Post in</span>
+        <abbr class="date" title="2015-05-21T10:12:00+02:00"> 
+            <a href="http://spseol.github.io/ulprog/archive/2015/kvě/index.html">Čt 21 květen 2015 </a>
+        </abbr>
+        <span class="meta-prep"> |Tagy:</span>
+                <a href="http://spseol.github.io/ulprog/tag/stredne-pokrocily.html">#středně pokročilý</a>
+                <a href="http://spseol.github.io/ulprog/tag/oop.html">#OOP</a>
+                <a href="http://spseol.github.io/ulprog/tag/rekurze.html">#rekurze</a>
+                <a href="http://spseol.github.io/ulprog/tag/struktury-a-algoritmy.html">#struktury a algoritmy</a>
+        <!-- TOBE COMMENTS -->
+    </div>
+    </header>
+    <div class="post-entry">
+        <div class="highlight"><pre>    _15_  
+   /    \ 
+  8_    20
+/  \   /\
+6   12 16 
+/\  /\ /\ 
+ 7        
+/\
+</pre></div>
+
+
+<p>Vytvořte sadu funkcí (metod) pro práci s binárním stromem. Tedy: přidávání
+prvku, mazání prvku, hledání prvku, případně vyvažování stromu.</p>
+<ul>
+<li><a href="http://cs.wikipedia.org/wiki/Binární_vyhledávací_strom">http://cs.wikipedia.org/wiki/Binární_vyhledávací_strom</a></li>
+<li><a href="http://cs.wikipedia.org/wiki/Řazení_haldou">http://cs.wikipedia.org/wiki/Řazení_haldou</a></li>
+<li><a href="ttp://www.linuxsoft.cz/article.php?id_article=1772">C++ Binární vyhledávací stromy</a></li>
+<li><a href="https://ksp.mff.cuni.cz/tasks/18/cook4.html">Recepty z programátorské kuchařky -- Vyhledávací stromy</a></li>
+</ul>
+<p>Jako základ pro vaši práci můžete použít <a href="http://spseol.github.io/ulprog/src/binarni_strom.py">tento zdrojový
+kód</a> 
+(Tento <a href="http://www.arungeek.com/binary-search-tree-in-python-with-ascii-art-visualization/">zdoj</a>
+jsem použil protože má hezký ASCII-art tisk).</p>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">Uzel</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">klic</span><span class="p">,</span> <span class="n">rodic</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">klic</span> <span class="o">=</span> <span class="n">klic</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vlevo</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vpravo</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rodic</span> <span class="o">=</span> <span class="n">rodic</span>
+
+
+<span class="k">class</span> <span class="nc">Strom</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">koren</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">vlozit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">klic</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">koren</span><span class="p">:</span>  <span class="c"># pokud je strom prázdný</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">koren</span> <span class="o">=</span> <span class="n">Uzel</span><span class="p">(</span><span class="n">klic</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hledacek</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">koren</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">klic</span> <span class="o">&lt;</span> <span class="n">hledacek</span><span class="o">.</span><span class="n">klic</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">hledacek</span><span class="o">.</span><span class="n">vlevo</span><span class="p">:</span>  <span class="c"># vlevo něco je</span>
+                        <span class="n">hledacek</span> <span class="o">=</span> <span class="n">hledacek</span><span class="o">.</span><span class="n">vlevo</span>
+                    <span class="k">else</span><span class="p">:</span>  <span class="c"># vlevo nic není</span>
+                        <span class="n">hledacek</span><span class="o">.</span><span class="n">vlevo</span> <span class="o">=</span> <span class="n">Uzel</span><span class="p">(</span><span class="n">klic</span><span class="p">)</span>
+                        <span class="n">hledacek</span><span class="o">.</span><span class="n">rodic</span> <span class="o">=</span> <span class="n">hledacek</span>
+                        <span class="k">break</span>
+                <span class="k">elif</span> <span class="n">klic</span> <span class="o">&gt;</span> <span class="n">hledacek</span><span class="o">.</span><span class="n">klic</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">hledacek</span><span class="o">.</span><span class="n">vpravo</span><span class="p">:</span>  <span class="c"># vpravo něco je</span>
+                        <span class="n">hledacek</span> <span class="o">=</span> <span class="n">hledacek</span><span class="o">.</span><span class="n">vpravo</span>
+                    <span class="k">else</span><span class="p">:</span>  <span class="c"># vpravo nic není</span>
+                        <span class="n">hledacek</span><span class="o">.</span><span class="n">vpravo</span> <span class="o">=</span> <span class="n">Uzel</span><span class="p">(</span><span class="n">klic</span><span class="p">)</span>
+                        <span class="n">hledacek</span><span class="o">.</span><span class="n">rodic</span> <span class="o">=</span> <span class="n">hledacek</span>
+                        <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>  <span class="c"># narazil jsem na číslo, které ve stromu už je</span>
+                    <span class="k">break</span>
+
+    <span class="k">def</span> <span class="nf">tisk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">koren</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">&#39;&lt;empty tree&gt;&#39;</span>
+
+        <span class="k">def</span> <span class="nf">traverse</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">node</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>  <span class="c"># lines | position | width</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">klic</span><span class="p">)</span>
+            <span class="n">left_lines</span><span class="p">,</span> <span class="n">left_pos</span><span class="p">,</span> <span class="n">left_width</span> <span class="o">=</span> <span class="n">traverse</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">vlevo</span><span class="p">)</span>
+            <span class="n">right_lines</span><span class="p">,</span> <span class="n">right_pos</span><span class="p">,</span> <span class="n">right_width</span> <span class="o">=</span> <span class="n">traverse</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">vpravo</span><span class="p">)</span>
+            <span class="n">middle</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">right_pos</span> <span class="o">+</span> <span class="n">left_width</span> <span class="o">-</span> <span class="n">left_pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">label</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">left_pos</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">//</span> <span class="mi">2</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="n">left_pos</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">+</span> <span class="n">right_width</span> <span class="o">-</span> <span class="n">right_pos</span>
+            <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">left_lines</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right_lines</span><span class="p">):</span>
+                <span class="n">left_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39; &#39;</span> <span class="o">*</span> <span class="n">left_width</span><span class="p">)</span>
+            <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">right_lines</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left_lines</span><span class="p">):</span>
+                <span class="n">right_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39; &#39;</span> <span class="o">*</span> <span class="n">right_width</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">middle</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">label</span><span class="p">))</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">node</span> <span class="ow">is</span> <span class="n">node</span><span class="o">.</span><span class="n">vlevo</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">label</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">middle</span><span class="p">:</span>
+                        <span class="n">label</span> <span class="o">+=</span> <span class="n">b</span><span class="s">&#39;_&#39;</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="n">middle</span><span class="p">,</span> <span class="n">b</span><span class="s">&#39;_&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">label</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;_&#39;</span><span class="p">:</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="s">&#39; &#39;</span> <span class="o">+</span> <span class="n">label</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="k">if</span> <span class="n">label</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;_&#39;</span><span class="p">:</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39; &#39;</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39; &#39;</span> <span class="o">*</span> <span class="n">left_pos</span> <span class="o">+</span> <span class="n">label</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">right_width</span> <span class="o">-</span> <span class="n">right_pos</span><span class="p">),</span>
+                    <span class="s">&#39; &#39;</span> <span class="o">*</span> <span class="n">left_pos</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">middle</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span>
+                    <span class="s">&#39;</span><span class="se">\\</span><span class="s">&#39;</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">right_width</span> <span class="o">-</span> <span class="n">right_pos</span><span class="p">)]</span> <span class="o">+</span> \
+                    <span class="p">[</span><span class="n">left_line</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">width</span> <span class="o">-</span> <span class="n">left_width</span> <span class="o">-</span> <span class="n">right_width</span><span class="p">)</span> <span class="o">+</span>
+                    <span class="n">right_line</span>
+                    <span class="k">for</span> <span class="n">left_line</span><span class="p">,</span> <span class="n">right_line</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">left_lines</span><span class="p">,</span> <span class="n">right_lines</span><span class="p">)]</span>
+            <span class="k">return</span> <span class="n">lines</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">width</span>
+        <span class="k">return</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">traverse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">koren</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">strom</span> <span class="o">=</span> <span class="n">Strom</span><span class="p">()</span>
+    <span class="n">strom</span><span class="o">.</span><span class="n">vlozit</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">strom</span><span class="o">.</span><span class="n">vlozit</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">strom</span><span class="o">.</span><span class="n">vlozit</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">strom</span><span class="o">.</span><span class="n">vlozit</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+    <span class="n">strom</span><span class="o">.</span><span class="n">vlozit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">strom</span><span class="o">.</span><span class="n">tisk</span><span class="p">())</span>
+</pre></div>
+    </div><!-- /.entry-content -->
+    <footer class="post-meta">
+        <span class="meta-prep">Category:</span>
+        <abbr class="category">
+            <a href="http://spseol.github.io/ulprog/category/uloha.html">úloha</a>
+        </abbr>
+    </footer>
+    <section id="respond">
+        <div id="disqus_thread">
+        <script type="text/javascript">
+        var disqus_identifier = "binarni-strom.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        </div>
+
+    </section>
+</section>
+
+
+        </section><!-- #content -->
+        <section id="widgets" class="grid col-300 fit" >
+            <!--
+            <section id="widget-search" class="widget-wrapper widget_search">
+
+                <form id="searchform" action="http://www.google.com/search" method="get">
+                    <input id="q" class="field" type="text" placeholder="Search UlProg" name="q" ></input>
+                    <input id="ie" name="ie" type="hidden" value="utf-8" ></input>
+                    <input id="oe" name="oe" type="hidden" value="utf-8" ></input>
+                    <input id="channel" name="channel" type="hidden" value="suggest" ></input>
+                    <input id="searchsubmit" class="submit" type="submit" value="">
+                </form>
+            </section>
+            -->
+            <section id="widget-category" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    Kategorie
+                </div>
+                <ul>
+                        <li><a href="http://spseol.github.io/ulprog/category/uloha.html" >úloha </a></li>
+                        <li><a href="http://spseol.github.io/ulprog/category/zadani-pro-tridu.html" >zadání pro třídu </a></li>
+                </ul>
+            </section>
+
+            <section id="widget-tagcloud" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    TagCloud
+                </div>
+                <div>
+                    <span><a href="http://spseol.github.io/ulprog/tag/funkce.html" style="font-size:calc(160% - 40%);"
+                        >#funkce</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/tkinter.html" style="font-size:calc(160% - 60%);"
+                        >#TkInter</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/datove-typy.html" style="font-size:calc(160% - 40%);"
+                        >#datové typy</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/python.html" style="font-size:calc(160% - 40%);"
+                        >#python</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/mirne-pokrocily.html" style="font-size:calc(160% - 10%);"
+                        >#mírně pokročilý</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/rekurze.html" style="font-size:calc(160% - 40%);"
+                        >#rekurze</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/zacatecnik.html" style="font-size:calc(160% - 20%);"
+                        >#začátečník</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/slovnik.html" style="font-size:calc(160% - 60%);"
+                        >#slovník</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/hra.html" style="font-size:calc(160% - 60%);"
+                        >#hra</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/stredne-pokrocily.html" style="font-size:calc(160% - 40%);"
+                        >#středně pokročilý</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/struktury-a-algoritmy.html" style="font-size:calc(160% - 60%);"
+                        >#struktury a algoritmy</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/oop.html" style="font-size:calc(160% - 40%);"
+                        >#OOP</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/vstupvystup.html" style="font-size:calc(160% - 60%);"
+                        >#vstup/výstup</a></span>
+                    <span><a href="http://spseol.github.io/ulprog/tag/podminky-a-cykly.html" style="font-size:calc(160% - 10%);"
+                        >#podmínky a cykly</a></span>
+                </div>
+            </section>
+
+            <section id="widget-social" class="widget-wrapper widget_archive">
+                <div class="widget-title">Social</div>
+                <ul>
+                        <li><a href="https://github.com/spseol/">GitHub</a></li>
+                        <li><a href="http://spseol.github.io/">spseol.github.io</a></li>
+                        <li><a href="https://cs-cz.facebook.com/spseol">Facebook</a></li>
+                        <li><a href="https://plus.google.com/118347382558771670752">G+</a></li>
+                        <li><a href="http://www.spseol.cz/">SPŠE Olomouc</a></li>
+                        <li><a href="http://hroch.spseol.cz/~nozka/">~Nožka</a></li>
+                        <li><a href="http://getpelican.com/">Pelican</a></li>
+                </ul>
+            </section>
+
+
+            <section id="widget-links" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    Odkazy
+                </div>
+                <ul>
+                        <li><a href="http://py.cz">Py.cz</a></li>
+                        <li><a href="http://python.cz/">Python.cz</a></li>
+                        <li><a href="http://python.org/">Python.org</a></li>
+                        <li><a href="https://docs.python.org/">Python documentation</a></li>
+                        <li><a href="http://www.itnetwork.cz/uzitecne-algoritmy-pro-programovani">Česká encyklopedie algoritmů</a></li>
+                        <li><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+                        <li><a href="http://tkinter.programujte.com">Úvod do Tkinter </a></li>
+                        <li><a href="http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/index.html">Tkinter reference</a></li>
+                        <li><a href="https://ksp.mff.cuni.cz/">Korespondenční seminář z programování</a></li>
+                        <li><a href="http://spseol.github.io/CzechFlaskDoc/">CzechFlaskDoc</a></li>
+                        <li><a href="http://spseol.github.io/PyQt4Doc/">PyQt4Doc</a></li>
+                        <li><a href="http://www.geon.wz.cz/pygame/">PyGame -- české tutoriály</a></li>
+                        <li><a href="http://jaksenaucitprogramovat.py.cz/">Jak se naučit programovat</a></li>
+                        <li><a href="http://howto.py.cz/">Učíme se programovat v jazyce Python 3</a></li>
+                        <li><a href="http://www.sallyx.org/sally/python/">Sallyx/Python</a></li>
+                        <li><a href="http://diveintopython3.py.cz/index.html">Ponořme se do Pythonu 3</a></li>
+                        <li><a href="http://www.root.cz/serialy/letajici-cirkus/">Létající cirkus</a></li>
+                        <li><a href="http://hroch/~nozka/python/matplotlib/">MatPlotLib</a></li>
+                </ul>
+            </section>
+            
+        </section><!-- widgets -->
+    </section><!-- /#wrapper -->
+    <footer id="footer" class="clearfix"><section class="footer-wrapper">
+        <div class="grid col-940" >
+            <div class="grid col-540"></div>
+            <div class="grid col-380 fit" >
+                <ul class="social-icons">
+                    <!-- TO BE CONTINUED -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid col-300 copyright" >
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">
+                <img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" style="border-width:0" alt="知识共享许可协议"></img>
+            </a>
+        </div>
+        <div class="grid col-300 ">
+
+        </div>
+        <div class="grid col-300 fit powered">
+            Powered by <a href="http://getpelican.com/">Pelican</a> <br />
+            which takes great advantage of <a href="http://python.org">Python</a>
+        </div>
+    </section></footer>
+</div>
+	<script type="text/javascript">
+		var pkBaseURL = "yanek.cz/piwik";
+	var _paq = _paq || [];
+	_paq.push(["trackPageView"]);
+	_paq.push(["enableLinkTracking"]);
+	(function() {
+		var u=(("https:" == document.location.protocol) ? "https" : "http")+"://"+pkBaseURL+"/";
+		_paq.push(["setTrackerUrl", u+"piwik.php"]);
+		_paq.push(["setSiteId", "6"]);
+		var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+		g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+	})();
+	</script>
+</body>
+</html>

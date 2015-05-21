@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Úlohy pro výuku programování</title><link>http://spseol.github.io/ulprog/</link><description></description><atom:link href="http://spseol.github.io/ulprog/feeds/marek.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 21 May 2015 10:03:56 +0200</lastBuildDate><item><title>Had nebo žížala, jednoduchá hra</title><link>http://spseol.github.io/ulprog/had-nebo-zizala-jednoducha-hra.html</link><description>&lt;p&gt;Úlokolem je vytvořit jednoduchou hru Had nebo Červ. Je jen na vás, co zvolíte
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Úlohy pro výuku programování</title><link>http://spseol.github.io/ulprog/</link><description></description><atom:link href="http://spseol.github.io/ulprog/feeds/marek.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 21 May 2015 10:10:34 +0200</lastBuildDate><item><title>Had nebo žížala, jednoduchá hra</title><link>http://spseol.github.io/ulprog/had-nebo-zizala-jednoducha-hra.html</link><description>&lt;p&gt;Úlokolem je vytvořit jednoduchou hru Had nebo Červ. Je jen na vás, co zvolíte
 a jak bude vypadat výsledek. Protože naše hra je maximálně jednoduchá postačí
 nám knihovna &lt;a class="reference external" href="http://tkinter.programujte.com/"&gt;TkInter&lt;/a&gt;
 a její &lt;a class="reference external" href="http://tkinter.programujte.com/canvas.htm"&gt;Canvas&lt;/a&gt;.&lt;/p&gt;
@@ -112,7 +112,7 @@ a když něco sežere hezky nám naroste.&lt;/p&gt;
 z díry a je delší a delší. Ovládat ji musím tak, abych nenarazil ani do zdi,
 ani do soupeře ani sám do sebe.&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marek</dc:creator><pubDate>Thu, 21 May 2015 10:03:56 +0200</pubDate><guid>tag:spseol.github.io,2015-05-21:ulprog/had-nebo-zizala-jednoducha-hra.html</guid><category>středně pokročilý</category><category>OOP</category><category>TkInter</category><category>hra</category></item><item><title>Počítání pro ZŠ</title><link>http://spseol.github.io/ulprog/pocitani-pro-zs.html</link><description>&lt;p&gt;Vyvořte aplikaci, pro kontrolu početních dovedností žáků 3. třídy ZŠ. Aplikace
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marek</dc:creator><pubDate>Thu, 21 May 2015 10:10:34 +0200</pubDate><guid>tag:spseol.github.io,2015-05-21:ulprog/had-nebo-zizala-jednoducha-hra.html</guid><category>středně pokročilý</category><category>OOP</category><category>TkInter</category><category>hra</category></item><item><title>Počítání pro ZŠ</title><link>http://spseol.github.io/ulprog/pocitani-pro-zs.html</link><description>&lt;p&gt;Vyvořte aplikaci, pro kontrolu početních dovedností žáků 3. třídy ZŠ. Aplikace
 vygeneruje 12 příkladů, bude kontrolovat výsedky a na koci vždy vypíše počet
 dobře a špatně zvládnutých úloh a procentní úspěšnost.&lt;/p&gt;
 &lt;div class="section" id="prvni-krok-odcitani"&gt;
