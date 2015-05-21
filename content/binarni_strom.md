@@ -9,11 +9,11 @@ Author: Marek Nožka
         _15_  
        /    \ 
       8_    20
-    /  \   /\
+     /  \   /\
     6   12 16 
     /\  /\ /\ 
-     7        
-    /\       
+     7
+    /\
 
 
 Vytvořte sadu funkcí (metod) pro práci s binárním stromem. Tedy: přidávání
@@ -21,7 +21,7 @@ prvku, mazání prvku, hledání prvku, případně vyvažování stromu.
 
 * <http://cs.wikipedia.org/wiki/Binární_vyhledávací_strom>
 * <http://cs.wikipedia.org/wiki/Řazení_haldou>
-* [C++ Binární vyhledávací stromy](ttp://www.linuxsoft.cz/article.php?id_article=1772)
+* [C++ Binární vyhledávací stromy](http://www.linuxsoft.cz/article.php?id_article=1772)
 * [Recepty z programátorské kuchařky -- Vyhledávací stromy](https://ksp.mff.cuni.cz/tasks/18/cook4.html)
 
 
@@ -29,7 +29,7 @@ prvku, mazání prvku, hledání prvku, případně vyvažování stromu.
 Jako základ pro vaši práci můžete použít [tento zdrojový
 kód]({filename}./src/binarni_strom.py) 
 (Tento [zdoj](http://www.arungeek.com/binary-search-tree-in-python-with-ascii-art-visualization/)
-jsem použil protože má hezký ASCII-art tisk).
+jsem použil, protože má hezký ASCII-art tisk).
 
     :::python
     class Uzel(object):
@@ -102,7 +102,6 @@ jsem použil protože má hezký ASCII-art tisk).
                 return lines, pos, width
             return '\n'.join(traverse(self.koren)[0])
 
-
     if __name__ == '__main__':
         strom = Strom()
         strom.vlozit(7)
@@ -111,3 +110,4 @@ jsem použil protože má hezký ASCII-art tisk).
         strom.vlozit(9)
         strom.vlozit(1)
         print(strom.tisk())
+
