@@ -127,7 +127,7 @@ ovládá pomocí šipek, dryhý pomocí A, S, D, W.
         snake2 = Snake(app, color='red', down="s", up='w', left='a', right='d')
         root.mainloop()
 
-Celý zdrojový kód si můžete stáhnout.
+Celý zdrojový kód si `můžete stáhnout <{filename}/src/wormsnake.py>`_.
 
 
 Varianta had

@@ -72,7 +72,7 @@ MD_EXTENSIONS = [
     'linksShortcuts:Shortcuts',
 ]
 
-STATIC_PATHS = ['extra', ]
+STATIC_PATHS = ['extra', 'src']
 
 DOCUTILS_SETTINGS = {'smart_quotes': 'yes',
                      'initial_header_level': 3,
