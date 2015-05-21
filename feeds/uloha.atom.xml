@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Úlohy pro výuku programování</title><link href="http://spseol.github.io/ulprog/" rel="alternate"></link><link href="http://spseol.github.io/ulprog/feeds/uloha.atom.xml" rel="self"></link><id>http://spseol.github.io/ulprog/</id><updated>2015-05-20T22:47:28+02:00</updated><entry><title>Had nebo žížala, jednoduchá hra</title><link href="http://spseol.github.io/ulprog/had-nebo-zizala-jednoducha-hra.html" rel="alternate"></link><updated>2015-05-20T22:47:28+02:00</updated><author><name>Marek</name></author><id>tag:spseol.github.io,2015-05-20:ulprog/had-nebo-zizala-jednoducha-hra.html</id><summary type="html">&lt;p&gt;Úlokolem je vytvořit jednoduchou hru Had nebo Červ. Je jen na vás, co zvolíte
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Úlohy pro výuku programování</title><link href="http://spseol.github.io/ulprog/" rel="alternate"></link><link href="http://spseol.github.io/ulprog/feeds/uloha.atom.xml" rel="self"></link><id>http://spseol.github.io/ulprog/</id><updated>2015-05-21T10:03:56+02:00</updated><entry><title>Had nebo žížala, jednoduchá hra</title><link href="http://spseol.github.io/ulprog/had-nebo-zizala-jednoducha-hra.html" rel="alternate"></link><updated>2015-05-21T10:03:56+02:00</updated><author><name>Marek</name></author><id>tag:spseol.github.io,2015-05-21:ulprog/had-nebo-zizala-jednoducha-hra.html</id><summary type="html">&lt;p&gt;Úlokolem je vytvořit jednoduchou hru Had nebo Červ. Je jen na vás, co zvolíte
 a jak bude vypadat výsledek. Protože naše hra je maximálně jednoduchá postačí
 nám knihovna &lt;a class="reference external" href="http://tkinter.programujte.com/"&gt;TkInter&lt;/a&gt;
 a její &lt;a class="reference external" href="http://tkinter.programujte.com/canvas.htm"&gt;Canvas&lt;/a&gt;.&lt;/p&gt;
@@ -100,7 +100,7 @@ ovládá pomocí šipek, dryhý pomocí A, S, D, W.&lt;/p&gt;
     &lt;span class="n"&gt;snake2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Snake&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;red&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;down&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;s&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;left&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainloop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Celý zdrojový kód si můžete stáhnout.&lt;/p&gt;
+&lt;p&gt;Celý zdrojový kód si &lt;a class="reference external" href="http://spseol.github.io/ulprog/src/wormsnake.py"&gt;můžete stáhnout&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="section" id="varianta-had"&gt;
 &lt;h3&gt;Varianta had&lt;/h3&gt;
 &lt;p&gt;Jak má celá hra vypadat záleží na vás. Jedna klasika je had. Ten se plazí
@@ -112,11 +112,11 @@ a když něco sežere hezky nám naroste.&lt;/p&gt;
 z díry a je delší a delší. Ovládat ji musím tak, abych nenarazil ani do zdi,
 ani do soupeře ani sám do sebe.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="středně pokročilý"></category><category term="OOP"></category><category term="TkInter"></category><category term="hra"></category></entry><entry><title>Počítání pro ZŠ</title><link href="http://spseol.github.io/ulprog/pocitani-pro-zs.html" rel="alternate"></link><updated>2015-05-12T16:53:42+02:00</updated><author><name>Marek</name></author><id>tag:spseol.github.io,2015-05-12:ulprog/pocitani-pro-zs.html</id><summary type="html">&lt;p&gt;Vyvořte aplikaci, pro kontrolu početních dovedností žáků 3. třídy ZŠ. Aplikace
+</summary><category term="středně pokročilý"></category><category term="OOP"></category><category term="TkInter"></category><category term="hra"></category></entry><entry><title>Počítání pro ZŠ</title><link href="http://spseol.github.io/ulprog/pocitani-pro-zs.html" rel="alternate"></link><updated>2015-05-12T15:06:13+02:00</updated><author><name>Marek</name></author><id>tag:spseol.github.io,2015-05-12:ulprog/pocitani-pro-zs.html</id><summary type="html">&lt;p&gt;Vyvořte aplikaci, pro kontrolu početních dovedností žáků 3. třídy ZŠ. Aplikace
 vygeneruje 12 příkladů, bude kontrolovat výsedky a na koci vždy vypíše počet
 dobře a špatně zvládnutých úloh a procentní úspěšnost.&lt;/p&gt;
 &lt;div class="section" id="prvni-krok-odcitani"&gt;
-&lt;h2&gt;První krok – odčítání&lt;/h2&gt;
+&lt;h3&gt;První krok – odčítání&lt;/h3&gt;
 &lt;p&gt;Generujte příklady pro odčítání do 100, tak abyste vyloučili záporné výsledky:&lt;/p&gt;
 &lt;p&gt;Např:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -128,7 +128,7 @@ dobře a špatně zvládnutých úloh a procentní úspěšnost.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="druhy-krok-deleni"&gt;
-&lt;h2&gt;Druhý krok – dělení&lt;/h2&gt;
+&lt;h3&gt;Druhý krok – dělení&lt;/h3&gt;
 &lt;p&gt;Generujte příklady pro dělení beze zbitku z malé násobilky.&lt;/p&gt;
 &lt;p&gt;Např:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -140,11 +140,11 @@ dobře a špatně zvládnutých úloh a procentní úspěšnost.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="treti-krok-plus-minus-krat-deleno"&gt;
-&lt;h2&gt;Třetí krok – plus, mínus krát děleno&lt;/h2&gt;
+&lt;h3&gt;Třetí krok – plus, mínus krát děleno&lt;/h3&gt;
 &lt;p&gt;Generujte náhodně příklady na sčítání, odčítání, násobení a dělení.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="ctvrty-krok-vyber-a-priorita"&gt;
-&lt;h2&gt;Čtvrtý krok  – výběr a priorita&lt;/h2&gt;
+&lt;h3&gt;Čtvrtý krok  – výběr a priorita&lt;/h3&gt;
 &lt;p&gt;Program si na začátku od uživatele vyžádá seznam operací, ze kterýh má zkoušet.
 Například&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
